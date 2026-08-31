@@ -167,7 +167,7 @@ export function AiPanel({ trace, stepIndex }: { trace: Trace | null; stepIndex: 
         )}
 
         {chatHistory.map((msg, i) => (
-          <section key={i} className="ai-card" style={{ background: msg.role === 'user' ? '#1b212a' : '#161a21' }}>
+          <section key={i} className="ai-card" style={{ background: msg.role === 'user' ? 'var(--panel-2)' : 'var(--panel)' }}>
             <h3 className="ai-title">{msg.role === 'user' ? 'You' : 'AI Tutor'}</h3>
             <div className="ai-text">{renderMessage(msg.text)}</div>
           </section>
@@ -183,8 +183,8 @@ export function AiPanel({ trace, stepIndex }: { trace: Trace | null; stepIndex: 
           onKeyDown={(e) => e.key === 'Enter' && sendChat()}
           placeholder="Ask a question about this step..."
           style={{
-            flex: 1, padding: '8px 12px', borderRadius: '6px', border: '1px solid #262c36', 
-            background: '#0f1115', color: '#d7dce3', fontFamily: 'inherit'
+            flex: 1, padding: '8px 12px', borderRadius: '6px', border: '1px solid var(--border)', 
+            background: 'var(--bg)', color: 'var(--text)', fontFamily: 'inherit'
           }}
         />
         <button className="ai-button" onClick={sendChat} disabled={busy || !chatInput.trim()}>
