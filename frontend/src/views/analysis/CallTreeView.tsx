@@ -66,7 +66,7 @@ function RecursionCanvas({ trace, stepIndex }: { trace: Trace; stepIndex: number
     }
     traverse(root);
 
-    layoutGraph(layoutNodes, layoutEdges, 'TB')
+    layoutGraph(layoutNodes, layoutEdges, 'DOWN')
       .then((result) => {
         if (!cancelled) setPositions(result);
       })

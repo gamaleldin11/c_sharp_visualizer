@@ -83,7 +83,7 @@ export function SplitPane({ split, initialSizes = [50, 50], minSizes = [100, 100
           justifyContent: 'center'
         }}
         onMouseDown={(e) => { e.preventDefault(); setIsDragging(true); }}
-        onTouchStart={(e) => { setIsDragging(true); }}
+        onTouchStart={() => { setIsDragging(true); }}
       >
         <div className="resizer-visible" />
       </div>
