@@ -17,6 +17,9 @@ public record ExplanationResult(
     [property: JsonPropertyName("droppedCitations")] int DroppedCitations,
     [property: JsonPropertyName("cached")] bool Cached);
 
+public record ChatResult(
+    [property: JsonPropertyName("text")] string Text);
+
 public record AiStatus(
     [property: JsonPropertyName("available")] bool Available,
     [property: JsonPropertyName("reason")] string? Reason,
@@ -152,6 +155,39 @@ public sealed class AiService : IDisposable
         var result = Parse(raw, trace, cached: false);
         if (result != null) _cache.Put(key, "explain", raw);
         return result;
+    }
+
+    /// Provides a conversational AI tutor for asking direct questions about the code.
+    /// The user's question and the current execution state are sent to the model.
+    public async Task<ChatResult?> ChatAsync(TraceDto? trace, int stepIndex, string message, CancellationToken cancellationToken)
+    {
+        if (!_options.IsUsable) return null;
+
+        if (!_cache.TryConsumeDailyBudget(_options.DailyCallBudget)) return null;
+
+        var systemPrompt = "You are an expert C# coding tutor. If the user asks you to write code, you MUST wrap it in a standard markdown C# code block (```csharp ... ```).";
+        
+        string userPrompt;
+        if (trace != null && stepIndex >= 0 && stepIndex < trace.Steps.Count)
+        {
+            systemPrompt += " The user is stepping through a program. Help them understand it.";
+            userPrompt = $"Here is the program context at step {stepIndex}:\n{Prompts.NarrateUser(trace, stepIndex)}\n\nUser Question: {message}";
+        }
+        else
+        {
+            userPrompt = $"User Question: {message}";
+        }
+
+        var text = await _client.CompleteAsync(
+            _options.NarrationModel,
+            systemPrompt,
+            userPrompt,
+            jsonMode: false,
+            maxTokens: 1000,
+            cancellationToken);
+
+        if (text == null) return null;
+        return new ChatResult(text);
     }
 
     private record RawExplanation(

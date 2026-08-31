@@ -94,9 +94,17 @@ export interface HeapNodeData extends Record<string, unknown> {
 }
 
 export function HeapNode({ data }: { data: HeapNodeData }) {
-  const { objId, obj, typeName, changed } = data;
+  const { obj } = data;
+  
+  if (obj.k === 'array' || obj.k === 'list' || obj.k === 'seq') {
+    return <HeapArrayNode data={data} />;
+  } else if (obj.k === 'dict') {
+    return <HeapDictNode data={data} />;
+  }
+  
+  // Standard object/boxed
+  const { objId, typeName, changed } = data;
   const rows = heapRows(obj);
-
   return (
     <div className={`node heap-node ${changed ? 'node-changed' : ''}`}>
       <Handle type="target" position={Position.Left} id={`o${objId}`} className="target-handle" />
@@ -126,6 +134,98 @@ export function HeapNode({ data }: { data: HeapNodeData }) {
   );
 }
 
+function isDefaultValue(val: Value): boolean {
+  if (val.k === 'null' || val.k === 'unset') return true;
+  if (val.k === 'prim') return val.v === 0 || val.v === false || val.v === '\0' || val.v === 0.0;
+  return false;
+}
+
+function HeapArrayNode({ data }: { data: HeapNodeData }) {
+  const { objId, obj, typeName, changed } = data;
+  const rows = heapRows(obj);
+
+  let maxAssigned = -1;
+  rows.forEach((r, i) => {
+    if (!isDefaultValue(r.value)) maxAssigned = i;
+  });
+  const visibleRows = rows.slice(0, maxAssigned + 1);
+
+  return (
+    <div className={`node heap-node heap-array-node ${changed ? 'node-changed' : ''}`}>
+      <Handle type="target" position={Position.Left} id={`o${objId}`} className="target-handle" />
+      <div className="node-header">
+        <span className="heap-type">{headerLabel(obj, typeName)}</span>
+        <span className="heap-id">#{objId}</span>
+      </div>
+      {visibleRows.length > 0 && (
+        <div className="heap-array-grid">
+          <div className="heap-array-indices">
+            {visibleRows.map((r) => (
+              <div key={`idx-${r.key}`} className="heap-array-cell index-cell">{r.key}</div>
+            ))}
+          </div>
+          <div className="heap-array-values">
+            {visibleRows.map((r) => (
+              <div key={`val-${r.key}`} className="heap-array-cell value-cell">
+                <ValueCell value={r.value} typeName={typeName} />
+                {r.value.k === 'ref' && (
+                  <Handle
+                    type="source"
+                    position={Position.Right}
+                    id={`o${objId}-${r.handle}`}
+                    className="ref-handle"
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function HeapDictNode({ data }: { data: HeapNodeData }) {
+  const { objId, obj, typeName, changed } = data;
+  const rows = heapRows(obj);
+
+  return (
+    <div className={`node heap-node heap-dict-node ${changed ? 'node-changed' : ''}`}>
+      <Handle type="target" position={Position.Left} id={`o${objId}`} className="target-handle" />
+      <div className="node-header">
+        <span className="heap-type">{headerLabel(obj, typeName)}</span>
+        <span className="heap-id">#{objId}</span>
+      </div>
+      <table className="heap-dict-table">
+        <thead>
+          <tr>
+            <th>Key</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr key={r.key}>
+              <td className="dict-key">{r.key}</td>
+              <td className="dict-val">
+                <ValueCell value={r.value} typeName={typeName} />
+                {r.value.k === 'ref' && (
+                  <Handle
+                    type="source"
+                    position={Position.Right}
+                    id={`o${objId}-${r.handle}`}
+                    className="ref-handle"
+                  />
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 function headerLabel(obj: HeapObject, typeName: TypeNames): string {
   switch (obj.k) {
     // The type name already ends in "[]" for arrays, so appending the length naively
@@ -149,11 +249,11 @@ function heapRows(obj: HeapObject): Row[] {
     case 'object':
       return obj.fields.map((f) => ({ key: f.name, value: f.value, handle: `f${f.name}` }));
     case 'array':
-      return obj.elems.map((v, i) => ({ key: `[${i}]`, value: v, handle: `e${i}` }));
+      return obj.elems.map((v, i) => ({ key: `${i}`, value: v, handle: `e${i}` }));
     case 'list':
       // Show the backing array, including slack capacity - that is the point of drawing a
       // List<T> at all rather than treating it as an opaque box.
-      return obj.backing.map((v, i) => ({ key: `[${i}]`, value: v, handle: `e${i}` }));
+      return obj.backing.map((v, i) => ({ key: `${i}`, value: v, handle: `e${i}` }));
     case 'dict':
       return obj.entries.map((e, i) => ({
         key: e.key.k === 'prim' ? formatPrim(e.key.t, e.key.v) : `#${i}`,
@@ -167,7 +267,7 @@ function heapRows(obj: HeapObject): Row[] {
       // Labelling it is the whole reason these are not just drawn as arrays.
       return obj.items.map((v, i) => {
         const isNext = obj.kind === 'stack' ? i === obj.items.length - 1 : i === 0;
-        return { key: isNext ? `[${i}] next` : `[${i}]`, value: v, handle: `e${i}` };
+        return { key: isNext ? `${i} next` : `${i}`, value: v, handle: `e${i}` };
       });
     default:
       return [];

@@ -5,6 +5,17 @@ export interface Sample {
 
 export const SAMPLES: Sample[] = [
   {
+    name: 'Custom Code',
+    source: `using System;
+
+class Program {
+    static void Main() {
+        Console.WriteLine("Hello, World!");
+    }
+}
+`,
+  },
+  {
     name: 'Linked list',
     source: `class Node { public int Val; public Node Next; }
 

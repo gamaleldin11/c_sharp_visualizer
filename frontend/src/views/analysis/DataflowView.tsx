@@ -67,36 +67,33 @@ export function DataflowView({ trace, stepIndex }: { trace: Trace; stepIndex: nu
       </div>
 
       <div className="dataflow-scroll">
-        <table className="dataflow">
-          <thead>
-            <tr>
-              <th>variable</th>
-              <th>written at</th>
-              <th>value</th>
-              <th>read at</th>
-            </tr>
-          </thead>
-          <tbody>
-            {shown.map((e, i) => (
-              <tr key={`${e.defStep}-${e.useStep}-${e.variable}-${i}`}>
-                <td className="df-var">{e.variable}</td>
-                <td>
-                  <button className="df-link" onClick={() => setStep(e.defStep)}>
-                    line {e.defLine} <span className="df-step">#{e.defStep + 1}</span>
-                  </button>
-                </td>
-                <td className="df-value">
-                  <ValueCell value={e.value as Value} typeName={typeName} />
-                </td>
-                <td>
-                  <button className="df-link" onClick={() => setStep(e.useStep)}>
-                    line {e.useLine} <span className="df-step">#{e.useStep + 1}</span>
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <div className="df-cards">
+          {shown.map((e, i) => {
+            const isActive = stepIndex === e.defStep || stepIndex === e.useStep;
+            return (
+              <div key={`${e.defStep}-${e.useStep}-${e.variable}-${i}`} className={`df-card ${isActive ? 'df-card-active' : ''}`}>
+                <div className="df-card-header">
+                  <span className="df-var">{e.variable}</span>
+                  <span className="df-equals">=</span>
+                  <span className="df-value">
+                    <ValueCell value={e.value as Value} typeName={typeName} />
+                  </span>
+                </div>
+                <div className="df-card-body">
+                  <div className="df-event">
+                    <span className="df-event-icon">📝</span>
+                    <span>Set at <button className="df-link" onClick={() => setStep(e.defStep)}>line {e.defLine}</button> <span className="df-step">#{e.defStep + 1}</span></span>
+                  </div>
+                  <div className="df-event-arrow">↓</div>
+                  <div className="df-event">
+                    <span className="df-event-icon">👁️</span>
+                    <span>Used at <button className="df-link" onClick={() => setStep(e.useStep)}>line {e.useLine}</button> <span className="df-step">#{e.useStep + 1}</span></span>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

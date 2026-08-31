@@ -71,6 +71,8 @@ export interface CallNode {
   children: CallNode[];
   /** Step index at which this frame was popped, or null if it never returned. */
   returnedAt: number | null;
+  /** Formatted string of the return value, if any. */
+  returnValue: string | null;
   /** True while the player is inside this call. */
   active: boolean;
 }
@@ -89,6 +91,7 @@ export function callTree(trace: Trace, upTo: number): CallNode | null {
     depth: 0,
     children: [],
     returnedAt: null,
+    returnValue: null,
     active: true,
   };
 
@@ -99,13 +102,26 @@ export function callTree(trace: Trace, upTo: number): CallNode | null {
     for (const op of trace.steps[i].delta) {
       if (op[0] === 'pushFrame') {
         const frame = op[1];
+        const params = frame.slots
+          .filter(s => s.kind === 'param')
+          .map(s => {
+            let val = '...';
+            if (s.value.k === 'prim') val = typeof s.value.v === 'string' ? `"${s.value.v}"` : String(s.value.v);
+            else if (s.value.k === 'null') val = 'null';
+            return `${s.name}: ${val}`;
+          })
+          .join(', ');
+        
+        const baseName = frame.declaringType ? `${frame.declaringType}.${frame.methodName}` : frame.methodName;
+        
         const node: CallNode = {
           id: frame.id,
           step: i,
-          label: frame.declaringType ? `${frame.declaringType}.${frame.methodName}` : frame.methodName,
+          label: `${baseName}(${params})`,
           depth: stack.length,
           children: [],
           returnedAt: null,
+          returnValue: null,
           // A call is "active" only if the player has reached it and it has not yet returned.
           active: i <= last,
         };
@@ -113,7 +129,16 @@ export function callTree(trace: Trace, upTo: number): CallNode | null {
         stack.push(node);
       } else if (op[0] === 'popFrame') {
         const node = stack.pop();
-        if (node) node.returnedAt = i;
+        if (node) {
+          node.returnedAt = i;
+          const ret = trace.steps[i]?.event?.returnValue;
+          if (ret) {
+            let val = '...';
+            if (ret.k === 'prim') val = typeof ret.v === 'string' ? `"${ret.v}"` : String(ret.v);
+            else if (ret.k === 'null') val = 'null';
+            node.returnValue = val;
+          }
+        }
         if (stack.length === 0) stack.push(root);
       }
     }

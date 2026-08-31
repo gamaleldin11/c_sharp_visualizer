@@ -28,3 +28,4 @@ E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Ai\bin\Debug\ne
 E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Ai\bin\Debug\net10.0\CsViz.Core.pdb
 E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Ai\obj\Debug\net10.0\CsViz.Ai.csproj.AssemblyReference.cache
 E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Ai\obj\Debug\net10.0\CsViz.Ai.csproj.Up2Date
+e:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Ai\obj\Debug\net10.0\CsViz.Ai.sourcelink.json

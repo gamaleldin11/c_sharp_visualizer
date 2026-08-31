@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Ai\\CsViz.Ai.csproj": {}
+    "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Ai\\CsViz.Ai.csproj": {}
   },
   "projects": {
-    "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Ai\\CsViz.Ai.csproj": {
+    "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Ai\\CsViz.Ai.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Ai\\CsViz.Ai.csproj",
+        "projectUniqueName": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Ai\\CsViz.Ai.csproj",
         "projectName": "CsViz.Ai",
-        "projectPath": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Ai\\CsViz.Ai.csproj",
+        "projectPath": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Ai\\CsViz.Ai.csproj",
         "packagesPath": "C:\\Users\\gehaz\\.nuget\\packages\\",
-        "outputPath": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Ai\\obj\\",
+        "outputPath": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Ai\\obj\\",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
         "CentralPackageTransitivePinningEnabled": true,
@@ -36,8 +36,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Trace\\CsViz.Trace.csproj": {
-                "projectPath": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Trace\\CsViz.Trace.csproj"
+              "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Trace\\CsViz.Trace.csproj": {
+                "projectPath": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Trace\\CsViz.Trace.csproj"
               }
             }
           }
@@ -368,14 +368,14 @@
         }
       }
     },
-    "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Analysis\\CsViz.Analysis.csproj": {
+    "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Analysis\\CsViz.Analysis.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Analysis\\CsViz.Analysis.csproj",
+        "projectUniqueName": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Analysis\\CsViz.Analysis.csproj",
         "projectName": "CsViz.Analysis",
-        "projectPath": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Analysis\\CsViz.Analysis.csproj",
+        "projectPath": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Analysis\\CsViz.Analysis.csproj",
         "packagesPath": "C:\\Users\\gehaz\\.nuget\\packages\\",
-        "outputPath": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Analysis\\obj\\",
+        "outputPath": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Analysis\\obj\\",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
         "CentralPackageTransitivePinningEnabled": true,
@@ -733,14 +733,14 @@
         }
       }
     },
-    "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\CsViz.Core.csproj": {
+    "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\CsViz.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\CsViz.Core.csproj",
+        "projectUniqueName": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\CsViz.Core.csproj",
         "projectName": "CsViz.Core",
-        "projectPath": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\CsViz.Core.csproj",
+        "projectPath": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\CsViz.Core.csproj",
         "packagesPath": "C:\\Users\\gehaz\\.nuget\\packages\\",
-        "outputPath": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\obj\\",
+        "outputPath": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\obj\\",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
         "CentralPackageTransitivePinningEnabled": true,
@@ -1093,14 +1093,14 @@
         }
       }
     },
-    "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Trace\\CsViz.Trace.csproj": {
+    "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Trace\\CsViz.Trace.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Trace\\CsViz.Trace.csproj",
+        "projectUniqueName": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Trace\\CsViz.Trace.csproj",
         "projectName": "CsViz.Trace",
-        "projectPath": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Trace\\CsViz.Trace.csproj",
+        "projectPath": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Trace\\CsViz.Trace.csproj",
         "packagesPath": "C:\\Users\\gehaz\\.nuget\\packages\\",
-        "outputPath": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Trace\\obj\\",
+        "outputPath": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Trace\\obj\\",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
         "CentralPackageTransitivePinningEnabled": true,
@@ -1125,11 +1125,11 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Analysis\\CsViz.Analysis.csproj": {
-                "projectPath": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Analysis\\CsViz.Analysis.csproj"
+              "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Analysis\\CsViz.Analysis.csproj": {
+                "projectPath": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Analysis\\CsViz.Analysis.csproj"
               },
-              "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\CsViz.Core.csproj": {
-                "projectPath": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\CsViz.Core.csproj"
+              "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\CsViz.Core.csproj": {
+                "projectPath": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\CsViz.Core.csproj"
               }
             }
           }

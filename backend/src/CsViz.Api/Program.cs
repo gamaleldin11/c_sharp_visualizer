@@ -136,6 +136,27 @@ app.MapPost("/api/ai/explain", async (ExplainRequest request, HttpContext contex
         : Results.Json(explanation, json);
 });
 
+// Conversational tutor endpoint. Allows the user to ask questions about the current state.
+app.MapPost("/api/ai/chat", async (ChatRequest request, HttpContext context, TraceCache cache, AiService ai, CancellationToken cancellationToken) =>
+{
+    if (!ai.Status().Available)
+        return Results.Json(new { error = ai.Status().Reason }, json, statusCode: 503);
+
+    if (!ai.AllowRequest(ClientId(context)))
+        return Results.Json(new { error = "Too many requests. Try again in a minute." }, json, statusCode: 429);
+
+    TraceDto? trace = null;
+    if (!string.IsNullOrEmpty(request.SourceHash))
+    {
+        trace = cache.TryGet(request.SourceHash);
+    }
+
+    var response = await ai.ChatAsync(trace, request.StepIndex ?? 0, request.Message, cancellationToken);
+    return response == null
+        ? Results.Json(new { error = "The chatbot is unavailable right now." }, json, statusCode: 503)
+        : Results.Json(response, json);
+});
+
 app.Run();
 
 /// Identifies a caller for rate limiting.
@@ -157,6 +178,8 @@ static string ClientId(HttpContext context)
 public record NarrateRequest(string SourceHash, int StepIndex);
 
 public record ExplainRequest(string SourceHash);
+
+public record ChatRequest(string? SourceHash, int? StepIndex, string Message);
 
 /// Bounded in-memory trace cache keyed by SHA256(source + stdin).
 ///

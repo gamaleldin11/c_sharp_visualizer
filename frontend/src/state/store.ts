@@ -4,6 +4,13 @@ import { TracePlayer } from '../trace/player';
 
 export type Tab = 'memory' | 'flowchart' | 'dataflow' | 'calls' | 'explain' | 'output' | 'diagnostics';
 
+export interface ChatMessage {
+  role: 'user' | 'bot';
+  text: string;
+}
+
+export type ThemeMode = 'light' | 'dark';
+
 interface AppState {
   source: string;
   stdin: string;
@@ -16,6 +23,8 @@ interface AppState {
   playing: boolean;
   aiAvailable: boolean;
   aiReason: string | null;
+  chatHistory: ChatMessage[];
+  theme: ThemeMode;
 
   setSource: (s: string) => void;
   setStdin: (s: string) => void;
@@ -27,6 +36,9 @@ interface AppState {
   finishRun: (t: Trace) => void;
   failRun: (message: string) => void;
   setAi: (available: boolean, reason: string | null) => void;
+  addChatMessage: (msg: ChatMessage) => void;
+  clearChatHistory: () => void;
+  setTheme: (theme: ThemeMode) => void;
 }
 
 // The Trace object is held by reference and never spread or cloned - it can be tens of
@@ -45,10 +57,13 @@ export const useApp = create<AppState>((set, get) => ({
   // then disappears on a server that has no key.
   aiAvailable: false,
   aiReason: null,
+  chatHistory: [{ role: 'bot', text: 'I can assist you with your task by explaining the code or writing new code!' }],
+  theme: 'dark',
 
   setSource: (source) => set({ source }),
   setStdin: (stdin) => set({ stdin }),
   setTab: (tab) => set({ tab }),
+  setTheme: (theme) => set({ theme }),
 
   setStep: (i) => {
     const { player } = get();
@@ -75,4 +90,7 @@ export const useApp = create<AppState>((set, get) => ({
   failRun: (error) => set({ running: false, error, trace: null, player: null }),
 
   setAi: (aiAvailable, aiReason) => set({ aiAvailable, aiReason }),
+  
+  addChatMessage: (msg) => set((s) => ({ chatHistory: [...s.chatHistory, msg] })),
+  clearChatHistory: () => set({ chatHistory: [{ role: 'bot', text: 'I can assist you with your task by explaining the code or writing new code!' }] }),
 }));

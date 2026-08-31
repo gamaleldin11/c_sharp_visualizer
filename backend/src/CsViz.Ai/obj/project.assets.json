@@ -697,11 +697,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Ai\\CsViz.Ai.csproj",
+      "projectUniqueName": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Ai\\CsViz.Ai.csproj",
       "projectName": "CsViz.Ai",
-      "projectPath": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Ai\\CsViz.Ai.csproj",
+      "projectPath": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Ai\\CsViz.Ai.csproj",
       "packagesPath": "C:\\Users\\gehaz\\.nuget\\packages\\",
-      "outputPath": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Ai\\obj\\",
+      "outputPath": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Ai\\obj\\",
       "projectStyle": "PackageReference",
       "centralPackageVersionsManagementEnabled": true,
       "CentralPackageTransitivePinningEnabled": true,
@@ -726,8 +726,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Trace\\CsViz.Trace.csproj": {
-              "projectPath": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Trace\\CsViz.Trace.csproj"
+            "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Trace\\CsViz.Trace.csproj": {
+              "projectPath": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Trace\\CsViz.Trace.csproj"
             }
           }
         }

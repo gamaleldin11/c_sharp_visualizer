@@ -8,7 +8,7 @@ type Mon = Parameters<OnMount>[1];
 type Ed = Parameters<OnMount>[0];
 
 export function CodeEditor({ activeLine }: { activeLine: number | null }) {
-  const { source, setSource } = useApp();
+  const { source, setSource, theme } = useApp();
   const editorRef = useRef<Ed | null>(null);
   const monacoRef = useRef<Mon | null>(null);
   const decorations = useRef<ReturnType<Ed['createDecorationsCollection']> | null>(null);
@@ -46,7 +46,7 @@ export function CodeEditor({ activeLine }: { activeLine: number | null }) {
     <Editor
       height="100%"
       defaultLanguage="csharp"
-      theme="vs-dark"
+      theme={theme === 'light' ? 'vs' : 'vs-dark'}
       value={source}
       onChange={(v) => setSource(v ?? '')}
       onMount={onMount}

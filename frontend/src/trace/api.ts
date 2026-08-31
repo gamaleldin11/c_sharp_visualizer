@@ -101,3 +101,11 @@ export function narrateStep(sourceHash: string, stepIndex: number): Promise<Narr
 export function explainTrace(sourceHash: string): Promise<Explanation> {
   return postAi<Explanation>('/api/ai/explain', { sourceHash });
 }
+
+export interface ChatResponse {
+  text: string;
+}
+
+export function chatStep(sourceHash: string | null, stepIndex: number, message: string): Promise<ChatResponse> {
+  return postAi<ChatResponse>('/api/ai/chat', { sourceHash, stepIndex, message });
+}

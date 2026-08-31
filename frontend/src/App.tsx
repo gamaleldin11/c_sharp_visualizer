@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useApp } from './state/store';
 import { aiStatus, runTrace } from './trace/api';
 import { CodeEditor } from './editor/CodeEditor';
@@ -7,6 +7,7 @@ import { MemoryView } from './views/memory/MemoryView';
 import { FlowchartView } from './views/analysis/FlowchartView';
 import { DataflowView } from './views/analysis/DataflowView';
 import { CallTreeView } from './views/analysis/CallTreeView';
+import { SplitPane } from './components/SplitPane';
 import { AiPanel } from './views/ai/AiPanel';
 import { OutputView, DiagnosticsView } from './views/output/OutputView';
 import { SAMPLES } from './samples';
@@ -14,16 +15,13 @@ import type { VmState } from './trace/types';
 
 const EMPTY: VmState = { frames: [], heap: new Map(), stdout: '' };
 
-const TABS = ['memory', 'flowchart', 'dataflow', 'calls', 'explain', 'output', 'diagnostics'] as const;
+const TABS = ['memory', 'flowchart', 'dataflow', 'calls'] as const;
 
 const TAB_LABELS: Record<string, string> = {
   memory: 'Memory',
   flowchart: 'Flowchart',
   dataflow: 'Dataflow',
-  calls: 'Call tree',
-  explain: 'Explain',
-  output: 'Output',
-  diagnostics: 'Diagnostics',
+  calls: 'Execution Tree',
 };
 
 export default function App() {
@@ -36,6 +34,12 @@ export default function App() {
   const error = useApp((s) => s.error);
   const tab = useApp((s) => s.tab);
   const setTab = useApp((s) => s.setTab);
+  const theme = useApp((s) => s.theme);
+  const setTheme = useApp((s) => s.setTheme);
+  
+  // Terminal tabs state
+  const [terminalTab, setTerminalTab] = useState<'output' | 'diagnostics'>('output');
+  const [showAi, setShowAi] = useState(false);
 
   useEffect(() => {
     if (!source) setSource(SAMPLES[0].source);
@@ -63,7 +67,7 @@ export default function App() {
   const activeLine = step?.line ?? null;
 
   return (
-    <div className="app">
+    <div className={`app ${theme === 'light' ? 'theme-light' : ''}`}>
       <header className="topbar">
         <div className="brand">
           C# Visualizer
@@ -88,24 +92,67 @@ export default function App() {
           {running ? 'Tracing…' : 'Run ▸'}
         </button>
 
-        {trace && <StatusPill />}
+        <button 
+          className="theme-toggle" 
+          onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+          aria-label="Toggle theme"
+          style={{ marginLeft: 'auto', background: 'transparent', border: 'none', color: 'var(--text)', cursor: 'pointer', fontSize: '18px' }}
+        >
+          {theme === 'light' ? '🌙' : '☀️'}
+        </button>
+
       </header>
 
       <main className="split">
-        <section className="pane pane-editor">
-          <CodeEditor activeLine={activeLine} />
+        <SplitPane split="vertical" initialSizes={[40, 60]} minSizes={[320, 320]}>
+          {/* LEFT COLUMN: Editor + Terminal */}
+          <section className="pane pane-editor">
+            <SplitPane split="horizontal" initialSizes={[65, 35]} minSizes={[150, 150]}>
+              <div className="editor-container">
+                <CodeEditor activeLine={activeLine} />
+              </div>
+              <div className="terminal-container">
+            <nav className="tabs" role="tablist" aria-label="Terminal views">
+              <button
+                role="tab"
+                aria-selected={terminalTab === 'output'}
+                className={terminalTab === 'output' ? 'tab tab-active' : 'tab'}
+                onClick={() => setTerminalTab('output')}
+              >
+                Output
+              </button>
+              <button
+                role="tab"
+                aria-selected={terminalTab === 'diagnostics'}
+                className={terminalTab === 'diagnostics' ? 'tab tab-active' : 'tab'}
+                onClick={() => setTerminalTab('diagnostics')}
+              >
+                Diagnostics
+                {trace && trace.diagnostics.length > 0 && (
+                  <span className="tab-count">{trace.diagnostics.length}</span>
+                )}
+              </button>
+              {trace && <StatusPill />}
+            </nav>
+            <div className="view" role="tabpanel">
+              {!trace && !error && <div className="empty-pane">Press <b>Run</b> to trace this program.</div>}
+              {trace && terminalTab === 'output' && <OutputView stdout={state.stdout} />}
+              {trace && terminalTab === 'diagnostics' && <DiagnosticsView trace={trace} />}
+            </div>
+          </div>
+          </SplitPane>
         </section>
 
+        {/* MIDDLE COLUMN: Visualizations */}
         <section className="pane pane-views">
           <nav
             className="tabs"
             role="tablist"
             aria-label="Visualization views"
             onKeyDown={(e) => {
-              // Roving arrow-key navigation, as ARIA specifies for a tab strip.
               if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
               e.preventDefault();
-              const at = TABS.indexOf(tab);
+              const at = TABS.indexOf(tab as any);
               const next = e.key === 'ArrowRight'
                 ? TABS[(at + 1) % TABS.length]
                 : TABS[(at - 1 + TABS.length) % TABS.length];
@@ -120,15 +167,11 @@ export default function App() {
                 role="tab"
                 aria-selected={tab === t}
                 aria-controls="view-panel"
-                // Only the selected tab is in the tab order; arrows move within the strip.
                 tabIndex={tab === t ? 0 : -1}
                 className={tab === t ? 'tab tab-active' : 'tab'}
                 onClick={() => setTab(t)}
               >
                 {TAB_LABELS[t]}
-                {t === 'diagnostics' && trace && trace.diagnostics.length > 0 && (
-                  <span className="tab-count">{trace.diagnostics.length}</span>
-                )}
               </button>
             ))}
           </nav>
@@ -140,16 +183,30 @@ export default function App() {
             {trace && tab === 'flowchart' && <FlowchartView trace={trace} step={step} />}
             {trace && tab === 'dataflow' && <DataflowView trace={trace} stepIndex={stepIndex} />}
             {trace && tab === 'calls' && <CallTreeView trace={trace} stepIndex={stepIndex} />}
-            {trace && tab === 'explain' && <AiPanel trace={trace} stepIndex={stepIndex} />}
-            {trace && tab === 'output' && <OutputView stdout={state.stdout} />}
-            {trace && tab === 'diagnostics' && <DiagnosticsView trace={trace} />}
           </div>
         </section>
+        </SplitPane>
       </main>
 
       <footer className="bottombar">
         <Transport />
       </footer>
+
+      {/* Floating AI Bubble */}
+      <div className="ai-bubble-container">
+        {showAi && (
+          <div className="ai-floating-panel">
+            <AiPanel trace={trace} stepIndex={stepIndex} />
+          </div>
+        )}
+        <button 
+          className="ai-bubble-btn" 
+          onClick={() => setShowAi(!showAi)}
+          aria-label="Toggle AI Assistant"
+        >
+          {showAi ? '×' : '✨'}
+        </button>
+      </div>
     </div>
   );
 }

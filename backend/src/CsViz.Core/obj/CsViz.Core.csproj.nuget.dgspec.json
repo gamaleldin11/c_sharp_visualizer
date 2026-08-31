@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\CsViz.Core.csproj": {}
+    "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\CsViz.Core.csproj": {}
   },
   "projects": {
-    "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\CsViz.Core.csproj": {
+    "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\CsViz.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\CsViz.Core.csproj",
+        "projectUniqueName": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\CsViz.Core.csproj",
         "projectName": "CsViz.Core",
-        "projectPath": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\CsViz.Core.csproj",
+        "projectPath": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\CsViz.Core.csproj",
         "packagesPath": "C:\\Users\\gehaz\\.nuget\\packages\\",
-        "outputPath": "E:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\obj\\",
+        "outputPath": "e:\\beeviro\\CS_visualizer_C_sharp\\cs-visualizer\\backend\\src\\CsViz.Core\\obj\\",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
         "CentralPackageTransitivePinningEnabled": true,

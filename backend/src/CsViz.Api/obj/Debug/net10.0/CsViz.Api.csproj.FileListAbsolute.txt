@@ -159,3 +159,4 @@ E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\n
 E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\win-x86\native\e_sqlite3.dll
 E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Ai.dll
 E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Ai.pdb
+e:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.sourcelink.json

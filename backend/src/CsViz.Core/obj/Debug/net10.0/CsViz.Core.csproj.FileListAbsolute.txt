@@ -22,3 +22,4 @@ E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Core\obj\Debug\
 E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Core\obj\Debug\net10.0\refint\CsViz.Core.dll
 E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Core\obj\Debug\net10.0\CsViz.Core.pdb
 E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Core\obj\Debug\net10.0\ref\CsViz.Core.dll
+e:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Core\obj\Debug\net10.0\CsViz.Core.sourcelink.json
