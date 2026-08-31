@@ -1,0 +1,24 @@
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Analysis\bin\Debug\net10.0\CsViz.Analysis.deps.json
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Analysis\bin\Debug\net10.0\CsViz.Analysis.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Analysis\bin\Debug\net10.0\CsViz.Analysis.pdb
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Analysis\obj\Debug\net10.0\CsViz.Analysis.csproj.AssemblyReference.cache
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Analysis\obj\Debug\net10.0\CsViz.Analysis.GeneratedMSBuildEditorConfig.editorconfig
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Analysis\obj\Debug\net10.0\CsViz.Analysis.AssemblyInfoInputs.cache
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Analysis\obj\Debug\net10.0\CsViz.Analysis.AssemblyInfo.cs
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Analysis\obj\Debug\net10.0\CsViz.Analysis.csproj.CoreCompileInputs.cache
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Analysis\obj\Debug\net10.0\CsViz.Analysis.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Analysis\obj\Debug\net10.0\refint\CsViz.Analysis.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Analysis\obj\Debug\net10.0\CsViz.Analysis.pdb
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Analysis\obj\Debug\net10.0\ref\CsViz.Analysis.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Analysis\bin\Debug\net10.0\CsViz.Analysis.deps.json
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Analysis\bin\Debug\net10.0\CsViz.Analysis.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Analysis\bin\Debug\net10.0\CsViz.Analysis.pdb
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Analysis\obj\Debug\net10.0\CsViz.Analysis.csproj.AssemblyReference.cache
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Analysis\obj\Debug\net10.0\CsViz.Analysis.GeneratedMSBuildEditorConfig.editorconfig
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Analysis\obj\Debug\net10.0\CsViz.Analysis.AssemblyInfoInputs.cache
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Analysis\obj\Debug\net10.0\CsViz.Analysis.AssemblyInfo.cs
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Analysis\obj\Debug\net10.0\CsViz.Analysis.csproj.CoreCompileInputs.cache
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Analysis\obj\Debug\net10.0\CsViz.Analysis.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Analysis\obj\Debug\net10.0\refint\CsViz.Analysis.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Analysis\obj\Debug\net10.0\CsViz.Analysis.pdb
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Analysis\obj\Debug\net10.0\ref\CsViz.Analysis.dll

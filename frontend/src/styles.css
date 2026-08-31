@@ -1,0 +1,522 @@
+:root {
+  --bg: #0f1115;
+  --panel: #161a21;
+  --panel-2: #1b212a;
+  --border: #262c36;
+  --text: #d7dce3;
+  --muted: #8891a0;
+  --accent: #6aa9ff;
+  --accent-dim: #2f4a6d;
+  --amber: #e0b050;
+  --green: #4fbf7f;
+  --red: #ef6b6b;
+  /* Hairline used between dense table rows, where the full border is too heavy. */
+  --border-soft: rgba(255, 255, 255, 0.05);
+  --mono: ui-monospace, "Cascadia Code", "JetBrains Mono", Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; margin: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 13px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+.app { display: flex; flex-direction: column; height: 100%; }
+
+/* ---------- top bar ---------- */
+.topbar {
+  display: flex; align-items: center; gap: 12px;
+  padding: 8px 14px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  flex: 0 0 auto;
+}
+.brand { font-weight: 650; letter-spacing: .2px; display: flex; align-items: baseline; gap: 8px; }
+.brand-sub { font-weight: 400; font-size: 11px; color: var(--muted); }
+
+.sample-select, .run {
+  background: var(--panel-2); color: var(--text);
+  border: 1px solid var(--border); border-radius: 6px;
+  padding: 5px 10px; font-size: 12px; cursor: pointer;
+}
+.sample-select:hover, .run:hover { border-color: #38414f; }
+.run { background: var(--accent); color: #06101f; border-color: transparent; font-weight: 600; }
+.run:disabled { opacity: .55; cursor: default; }
+
+.pill {
+  margin-left: auto; font-size: 11px; padding: 3px 9px; border-radius: 999px;
+  border: 1px solid var(--border); color: var(--muted); text-transform: lowercase;
+}
+.pill-ok { color: var(--green); border-color: #22412f; background: #12261b; }
+.pill-compile_error, .pill-runtime_error { color: #ef6b6b; border-color: #4a2626; background: #2a1616; }
+.pill-limit_exceeded { color: var(--amber); border-color: #4a3f22; background: #262016; }
+
+/* ---------- split ---------- */
+.split { flex: 1 1 auto; display: grid; grid-template-columns: minmax(320px, 40%) 1fr; min-height: 0; }
+.pane { min-width: 0; min-height: 0; display: flex; flex-direction: column; }
+.pane-editor { border-right: 1px solid var(--border); }
+.pane-views { background: var(--bg); }
+
+.tabs { display: flex; gap: 2px; padding: 6px 8px 0; border-bottom: 1px solid var(--border); background: var(--panel); flex: 0 0 auto; }
+.tab {
+  background: transparent; border: 1px solid transparent; border-bottom: none;
+  color: var(--muted); padding: 6px 12px; font-size: 12px; cursor: pointer;
+  border-radius: 6px 6px 0 0; display: flex; align-items: center; gap: 6px;
+}
+.tab:hover { color: var(--text); }
+.tab-active { background: var(--bg); border-color: var(--border); color: var(--text); }
+.tab-count { background: #3a2a2a; color: #e79b9b; border-radius: 999px; padding: 0 6px; font-size: 10px; }
+
+.view { flex: 1 1 auto; position: relative; min-height: 0; overflow: hidden; }
+
+.empty-pane { padding: 24px; color: var(--muted); font-size: 12.5px; }
+.banner { padding: 10px 14px; font-size: 12px; }
+.banner-error { background: #2a1616; color: #ef8b8b; border-bottom: 1px solid #4a2626; }
+
+/* ---------- nodes ---------- */
+.node {
+  width: 250px; background: var(--panel); border: 1px solid var(--border);
+  border-radius: 8px; overflow: hidden; font-family: var(--mono); font-size: 11.5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.4);
+}
+.node-header {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 6px 9px; background: var(--panel-2); border-bottom: 1px solid var(--border);
+  font-size: 11px;
+}
+.frame-node { border-color: #2f3a4a; }
+.frame-top { border-color: var(--accent); box-shadow: 0 0 0 1px rgba(106,169,255,.25); }
+.frame-method { color: var(--accent); font-weight: 600; }
+.badge { font-size: 9px; text-transform: uppercase; letter-spacing: .5px; color: #06101f; background: var(--accent); padding: 1px 5px; border-radius: 3px; }
+
+.heap-node { border-color: #3a3524; }
+.heap-type { color: var(--amber); font-weight: 600; }
+.heap-id { color: var(--muted); font-size: 10px; }
+.node-changed { animation: flash 700ms ease-out; }
+@keyframes flash {
+  from { box-shadow: 0 0 0 2px var(--green); }
+  to   { box-shadow: 0 1px 3px rgba(0,0,0,.4); }
+}
+
+.node-body { padding: 3px 0; }
+.row { display: flex; align-items: center; gap: 8px; height: 24px; padding: 0 9px; position: relative; }
+.row-out { opacity: .38; }
+.row-empty { color: var(--muted); font-style: italic; }
+.row-key { color: var(--muted); flex: 0 0 auto; display: flex; align-items: center; gap: 5px; }
+.row-val { margin-left: auto; text-align: right; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.param-tag { font-size: 8.5px; text-transform: uppercase; color: #7d8ba0; border: 1px solid #333c49; border-radius: 3px; padding: 0 3px; }
+
+.val-int, .val-long, .val-short, .val-byte, .val-double, .val-float, .val-decimal { color: #b6d38a; }
+.val-string { color: #d99a6c; }
+.val-char { color: #d99a6c; }
+.val-bool { color: #c39ae0; }
+.val-null { color: #6f7a8a; font-style: italic; }
+.val-unset { color: #55606f; font-style: italic; }
+.val-ref { color: var(--accent); }
+
+.val-struct { display: inline-flex; align-items: center; gap: 5px; border: 1px dashed #4a4530; border-radius: 4px; padding: 0 4px; }
+.struct-tag { color: var(--amber); font-size: 9.5px; }
+.struct-field { display: inline-flex; gap: 3px; }
+.struct-key { color: var(--muted); }
+
+.ref-handle { width: 7px !important; height: 7px !important; background: var(--accent) !important; border: none !important; right: -4px !important; }
+.target-handle { width: 7px !important; height: 7px !important; background: var(--amber) !important; border: none !important; left: -4px !important; }
+
+.react-flow__edge.edge-stack .react-flow__edge-path { stroke: var(--accent); stroke-width: 1.6; }
+.react-flow__edge.edge-heap .react-flow__edge-path { stroke: #8a7a4a; stroke-width: 1.6; }
+.react-flow__background { opacity: .5; }
+
+/* ---------- output & diagnostics ---------- */
+.stdout { margin: 0; padding: 14px 16px; font-family: var(--mono); font-size: 12px; white-space: pre-wrap; height: 100%; overflow: auto; }
+.diagnostics { list-style: none; margin: 0; padding: 8px; overflow: auto; height: 100%; }
+.diag { display: flex; gap: 10px; padding: 7px 10px; border-radius: 6px; font-size: 12px; align-items: baseline; }
+.diag + .diag { margin-top: 3px; }
+.diag-error { background: #2a1616; }
+.diag-warn { background: #23200f; }
+.diag-loc { font-family: var(--mono); color: var(--muted); flex: 0 0 auto; }
+.diag-id { font-family: var(--mono); font-size: 10.5px; color: #7d8ba0; flex: 0 0 auto; }
+.diag-msg { color: var(--text); }
+
+/* ---------- transport ---------- */
+.bottombar { flex: 0 0 auto; background: var(--panel); border-top: 1px solid var(--border); padding: 8px 14px; }
+.transport { display: flex; align-items: center; gap: 12px; }
+.transport-buttons { display: flex; gap: 4px; }
+.transport-buttons button {
+  background: var(--panel-2); border: 1px solid var(--border); color: var(--text);
+  width: 32px; height: 28px; border-radius: 6px; cursor: pointer; font-size: 11px;
+  display: flex; align-items: center; justify-content: center;
+}
+.transport-buttons button:hover:not(:disabled) { border-color: #38414f; }
+.transport-buttons button:disabled { opacity: .35; cursor: default; }
+.transport-buttons .play { background: var(--accent); color: #06101f; border-color: transparent; }
+
+.scrubber { flex: 1 1 auto; accent-color: var(--accent); height: 4px; }
+.step-count { font-family: var(--mono); font-size: 11.5px; color: var(--muted); min-width: 120px; text-align: right; }
+
+/* ---------- monaco decorations ---------- */
+.line-executed { background: rgba(106, 169, 255, .14); }
+.glyph-executed { background: var(--accent); width: 3px !important; margin-left: 4px; }
+
+/* ---------------------------------------------------------------------------
+   Static views: flowchart, dataflow, call tree
+   --------------------------------------------------------------------------- */
+
+.analysis-pane {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.analysis-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  background: var(--panel);
+  flex: 0 0 auto;
+}
+
+.analysis-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.analysis-select {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-family: inherit;
+  max-width: 260px;
+}
+
+.analysis-reset {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.analysis-reset:hover { border-color: var(--accent); }
+
+.analysis-hint {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.analysis-canvas {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+/* Flowchart blocks */
+
+.cfg-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.cfg-code {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.35;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--text);
+}
+
+.cfg-count {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.react-flow__edge.cfg-edge .react-flow__edge-path { stroke: #38445c; stroke-width: 1.5; }
+.react-flow__edge.cfg-edge-hot .react-flow__edge-path { stroke: var(--accent); stroke-width: 2; }
+.react-flow__edge.cfg-edge .react-flow__edge-text { fill: var(--muted); font-size: 10px; }
+.react-flow__edge.cfg-edge .react-flow__edge-textbg { fill: var(--panel); }
+
+/* Call tree */
+
+.calltree-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  padding: 10px 14px;
+}
+
+ul.calltree {
+  list-style: none;
+  margin: 0;
+  padding-left: 16px;
+  /* The guide rail is what makes recursion depth readable at a glance. */
+  border-left: 1px solid var(--border);
+}
+
+.calltree-scroll > ul.calltree { padding-left: 0; border-left: none; }
+
+.calltree-node {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 3px 8px;
+  margin: 1px 0;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.calltree-node:hover { background: var(--panel-2); border-color: var(--border); }
+.calltree-future { opacity: 0.35; }
+.calltree-returned .calltree-name { color: var(--muted); }
+.calltree-active {
+  background: rgba(56, 128, 224, 0.16);
+  border-color: var(--accent);
+}
+
+.calltree-name { flex: 1 1 auto; }
+.calltree-step { font-size: 10px; color: var(--muted); }
+
+/* Dataflow table */
+
+.dataflow-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+}
+
+table.dataflow {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+table.dataflow th {
+  position: sticky;
+  top: 0;
+  background: var(--panel);
+  text-align: left;
+  font-weight: 500;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+table.dataflow td {
+  padding: 4px 12px;
+  border-bottom: 1px solid var(--border-soft);
+  vertical-align: middle;
+}
+
+table.dataflow tr:hover td { background: var(--panel-2); }
+
+.df-var { font-family: var(--mono); color: var(--accent); }
+
+.df-link {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.df-link:hover { color: var(--accent); text-decoration: underline; }
+.df-step { color: var(--muted); font-size: 10px; }
+.df-value { font-family: var(--mono); }
+
+/* React Flow's zoom controls ship with a light-theme default, which renders as a white
+   rectangle on this background. Restyled once here so both graph views inherit it. */
+.react-flow__controls {
+  box-shadow: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.react-flow__controls-button {
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  width: 24px;
+  height: 24px;
+}
+
+.react-flow__controls-button:hover { background: var(--panel-2); }
+.react-flow__controls-button:last-child { border-bottom: none; }
+.react-flow__controls-button svg { fill: var(--text); }
+
+/* ---------------------------------------------------------------------------
+   AI explanations
+   --------------------------------------------------------------------------- */
+
+.ai-pane { display: flex; flex-direction: column; height: 100%; min-height: 0; }
+
+.ai-scroll { flex: 1 1 auto; min-height: 0; overflow: auto; padding: 14px; }
+
+.ai-button {
+  background: var(--accent-dim);
+  color: var(--text);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.ai-button:hover:not(:disabled) { background: var(--accent); color: #0f1115; }
+.ai-button:disabled { opacity: 0.5; cursor: default; }
+
+.ai-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+
+.ai-title {
+  margin: 0 0 6px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.ai-text { margin: 0 0 10px; font-size: 13px; line-height: 1.6; }
+.ai-text:last-child { margin-bottom: 0; }
+.ai-label { color: var(--muted); }
+.ai-cite { margin-right: 8px; color: var(--accent); }
+
+/* An unverifiable citation is surfaced, not hidden: the reader should know the model cited
+   something that does not exist. */
+.ai-warn {
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: var(--amber);
+}
+
+.ai-code {
+  margin: 0;
+  padding: 8px 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: var(--mono);
+  font-size: 12px;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.ai-reason { margin-top: 6px; font-size: 12px; color: var(--muted); }
+
+/* ---------------------------------------------------------------------------
+   Supported-language reference
+   --------------------------------------------------------------------------- */
+
+.diagnostics-pane { height: 100%; overflow: auto; }
+
+.support { border-top: 1px solid var(--border); margin-top: 8px; }
+
+.support-toggle {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.support-toggle:hover { color: var(--text); }
+
+.support-loading { padding: 0 14px 12px; font-size: 12px; color: var(--muted); }
+
+.support-body {
+  padding: 0 14px 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.support-group { min-width: 0; }
+
+.support-title {
+  margin: 0 0 4px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
+.support-title-off { color: var(--muted); }
+
+.support-list {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.support-list-off { color: var(--muted); }
+
+/* ---------------------------------------------------------------------------
+   Focus
+   --------------------------------------------------------------------------- */
+
+/* A keyboard user has to be able to see where they are. :focus-visible rather than :focus so
+   the ring appears for keyboard navigation without outlining every clicked button. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* The view panel is focusable so activating a tab can move focus into its content, but it is
+   a container rather than a control and does not need a ring of its own. */
+.view:focus-visible { outline: none; }
+
+/* Respect a reader who has asked the system for less animation. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

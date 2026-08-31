@@ -1,0 +1,923 @@
+{
+  "version": 1,
+  "sourceHash": "de66a219ab6c14c0d4f2109377c6d2abdc3c24963c79d38b00d4eb777460c14f",
+  "source": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        var list = new List\u003Cint\u003E();\n        for (int i = 0; i \u003C 6; i\u002B\u002B) list.Add(i * i);\n        Console.WriteLine(list.Count);\n        Console.WriteLine(list[3]);\n        list[3] = 99;\n        Console.WriteLine(list[3]);\n        foreach (int v in list) Console.WriteLine(v);\n        list.Clear();\n        Console.WriteLine(list.Count);\n    }\n}\n",
+  "status": "ok",
+  "diagnostics": [],
+  "strings": [
+    "6\n",
+    "9\n",
+    "99\n",
+    "0\n",
+    "1\n",
+    "4\n",
+    "16\n",
+    "25\n"
+  ],
+  "types": [
+    {
+      "id": 0,
+      "name": "System.Collections.Generic.List\u003Cint\u003E",
+      "kind": "class"
+    }
+  ],
+  "snapshots": [
+    {
+      "frames": [
+        {
+          "id": 1,
+          "methodName": "Main",
+          "declaringType": "Program",
+          "callLine": 0,
+          "slots": [
+            {
+              "slotId": 1,
+              "name": "list",
+              "kind": "local",
+              "declaredLine": 8,
+              "inScope": true,
+              "value": {
+                "k": "ref",
+                "id": 1
+              }
+            },
+            {
+              "slotId": 2,
+              "name": "i",
+              "kind": "local",
+              "declaredLine": 9,
+              "inScope": false,
+              "value": {
+                "k": "unset"
+              }
+            },
+            {
+              "slotId": 3,
+              "name": "v",
+              "kind": "local",
+              "declaredLine": 14,
+              "inScope": false,
+              "value": {
+                "k": "unset"
+              }
+            }
+          ]
+        }
+      ],
+      "heap": {
+        "1": {
+          "k": "list",
+          "t": 0,
+          "count": 0,
+          "capacity": 4,
+          "backing": [
+            {
+              "k": "unset"
+            },
+            {
+              "k": "unset"
+            },
+            {
+              "k": "unset"
+            },
+            {
+              "k": "unset"
+            }
+          ]
+        }
+      },
+      "stdout": ""
+    }
+  ],
+  "keyframes": [
+    {
+      "stepIndex": 0,
+      "snapshotIndex": 0
+    }
+  ],
+  "steps": [
+    {
+      "i": 0,
+      "line": 8,
+      "col": 9,
+      "endLine": 8,
+      "endCol": 36,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "pushFrame",
+          {
+            "id": 1,
+            "methodName": "Main",
+            "declaringType": "Program",
+            "callLine": 0,
+            "slots": [
+              {
+                "slotId": 1,
+                "name": "list",
+                "kind": "local",
+                "declaredLine": 8,
+                "inScope": false,
+                "value": {
+                  "k": "unset"
+                }
+              },
+              {
+                "slotId": 2,
+                "name": "i",
+                "kind": "local",
+                "declaredLine": 9,
+                "inScope": false,
+                "value": {
+                  "k": "unset"
+                }
+              },
+              {
+                "slotId": 3,
+                "name": "v",
+                "kind": "local",
+                "declaredLine": 14,
+                "inScope": false,
+                "value": {
+                  "k": "unset"
+                }
+              }
+            ]
+          }
+        ],
+        [
+          "scope",
+          1,
+          1,
+          true
+        ],
+        [
+          "newObj",
+          1,
+          {
+            "k": "object",
+            "t": 0,
+            "fields": []
+          }
+        ],
+        [
+          "newObj",
+          1,
+          {
+            "k": "list",
+            "t": 0,
+            "count": 0,
+            "capacity": 4,
+            "backing": [
+              {
+                "k": "unset"
+              },
+              {
+                "k": "unset"
+              },
+              {
+                "k": "unset"
+              },
+              {
+                "k": "unset"
+              }
+            ]
+          }
+        ],
+        [
+          "setLocal",
+          1,
+          1,
+          {
+            "k": "ref",
+            "id": 1
+          }
+        ]
+      ]
+    },
+    {
+      "i": 1,
+      "line": 9,
+      "col": 9,
+      "endLine": 9,
+      "endCol": 53,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "scope",
+          1,
+          2,
+          true
+        ],
+        [
+          "setLocal",
+          1,
+          2,
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 0
+          }
+        ],
+        [
+          "newObj",
+          1,
+          {
+            "k": "list",
+            "t": 0,
+            "count": 1,
+            "capacity": 4,
+            "backing": [
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 0
+              },
+              {
+                "k": "unset"
+              },
+              {
+                "k": "unset"
+              },
+              {
+                "k": "unset"
+              }
+            ]
+          }
+        ],
+        [
+          "setLocal",
+          1,
+          2,
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 1
+          }
+        ],
+        [
+          "newObj",
+          1,
+          {
+            "k": "list",
+            "t": 0,
+            "count": 2,
+            "capacity": 4,
+            "backing": [
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 0
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 1
+              },
+              {
+                "k": "unset"
+              },
+              {
+                "k": "unset"
+              }
+            ]
+          }
+        ],
+        [
+          "setLocal",
+          1,
+          2,
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 2
+          }
+        ],
+        [
+          "newObj",
+          1,
+          {
+            "k": "list",
+            "t": 0,
+            "count": 3,
+            "capacity": 4,
+            "backing": [
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 0
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 1
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 4
+              },
+              {
+                "k": "unset"
+              }
+            ]
+          }
+        ],
+        [
+          "setLocal",
+          1,
+          2,
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 3
+          }
+        ],
+        [
+          "newObj",
+          1,
+          {
+            "k": "list",
+            "t": 0,
+            "count": 4,
+            "capacity": 4,
+            "backing": [
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 0
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 1
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 4
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 9
+              }
+            ]
+          }
+        ],
+        [
+          "setLocal",
+          1,
+          2,
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 4
+          }
+        ],
+        [
+          "newObj",
+          1,
+          {
+            "k": "list",
+            "t": 0,
+            "count": 5,
+            "capacity": 8,
+            "backing": [
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 0
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 1
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 4
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 9
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 16
+              },
+              {
+                "k": "unset"
+              },
+              {
+                "k": "unset"
+              },
+              {
+                "k": "unset"
+              }
+            ]
+          }
+        ],
+        [
+          "setLocal",
+          1,
+          2,
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 5
+          }
+        ],
+        [
+          "newObj",
+          1,
+          {
+            "k": "list",
+            "t": 0,
+            "count": 6,
+            "capacity": 8,
+            "backing": [
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 0
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 1
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 4
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 9
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 16
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 25
+              },
+              {
+                "k": "unset"
+              },
+              {
+                "k": "unset"
+              }
+            ]
+          }
+        ],
+        [
+          "setLocal",
+          1,
+          2,
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 6
+          }
+        ]
+      ]
+    },
+    {
+      "i": 2,
+      "line": 10,
+      "col": 9,
+      "endLine": 10,
+      "endCol": 39,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          0
+        ]
+      ]
+    },
+    {
+      "i": 3,
+      "line": 11,
+      "col": 9,
+      "endLine": 11,
+      "endCol": 36,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          1
+        ]
+      ]
+    },
+    {
+      "i": 4,
+      "line": 12,
+      "col": 9,
+      "endLine": 12,
+      "endCol": 22,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "setElem",
+          1,
+          3,
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 99
+          }
+        ]
+      ]
+    },
+    {
+      "i": 5,
+      "line": 13,
+      "col": 9,
+      "endLine": 13,
+      "endCol": 36,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          2
+        ]
+      ]
+    },
+    {
+      "i": 6,
+      "line": 14,
+      "col": 9,
+      "endLine": 14,
+      "endCol": 54,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "scope",
+          1,
+          3,
+          true
+        ],
+        [
+          "setLocal",
+          1,
+          3,
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 0
+          }
+        ],
+        [
+          "stdout",
+          3
+        ],
+        [
+          "setLocal",
+          1,
+          3,
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 1
+          }
+        ],
+        [
+          "stdout",
+          4
+        ],
+        [
+          "setLocal",
+          1,
+          3,
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 4
+          }
+        ],
+        [
+          "stdout",
+          5
+        ],
+        [
+          "setLocal",
+          1,
+          3,
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 99
+          }
+        ],
+        [
+          "stdout",
+          2
+        ],
+        [
+          "setLocal",
+          1,
+          3,
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 16
+          }
+        ],
+        [
+          "stdout",
+          6
+        ],
+        [
+          "setLocal",
+          1,
+          3,
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 25
+          }
+        ],
+        [
+          "stdout",
+          7
+        ],
+        [
+          "scope",
+          1,
+          3,
+          false
+        ]
+      ]
+    },
+    {
+      "i": 7,
+      "line": 15,
+      "col": 9,
+      "endLine": 15,
+      "endCol": 22,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "newObj",
+          1,
+          {
+            "k": "list",
+            "t": 0,
+            "count": 0,
+            "capacity": 4,
+            "backing": [
+              {
+                "k": "unset"
+              },
+              {
+                "k": "unset"
+              },
+              {
+                "k": "unset"
+              },
+              {
+                "k": "unset"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "i": 8,
+      "line": 16,
+      "col": 9,
+      "endLine": 16,
+      "endCol": 39,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          3
+        ]
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "name": "Main",
+      "declaringType": "Program",
+      "startLine": 6,
+      "endLine": 17,
+      "blocks": [
+        {
+          "ordinal": 0,
+          "kind": "entry",
+          "label": "start",
+          "lines": [],
+          "fallThrough": 1,
+          "reachable": true
+        },
+        {
+          "ordinal": 1,
+          "kind": "block",
+          "label": "list = new List\u003Cint\u003E()",
+          "lines": [
+            8
+          ],
+          "fallThrough": 2,
+          "reachable": true
+        },
+        {
+          "ordinal": 2,
+          "kind": "block",
+          "label": "i = 0",
+          "lines": [
+            9
+          ],
+          "fallThrough": 3,
+          "reachable": true
+        },
+        {
+          "ordinal": 3,
+          "kind": "block",
+          "label": "i \u003C 6",
+          "lines": [
+            9
+          ],
+          "condition": "i \u003C 6",
+          "fallThrough": 4,
+          "conditionalTarget": 5,
+          "conditionalLabel": "false",
+          "reachable": true
+        },
+        {
+          "ordinal": 4,
+          "kind": "block",
+          "label": "list.Add(i * i);\ni\u002B\u002B",
+          "lines": [
+            9
+          ],
+          "fallThrough": 3,
+          "reachable": true
+        },
+        {
+          "ordinal": 5,
+          "kind": "block",
+          "label": "Console.WriteLine(list.Count);\nConsole.WriteLine(list[3]);\nlist[3] = 99;\nConsole.WriteLine(list[3]);",
+          "lines": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "fallThrough": 6,
+          "reachable": true
+        },
+        {
+          "ordinal": 6,
+          "kind": "block",
+          "label": "list",
+          "lines": [
+            14
+          ],
+          "fallThrough": 7,
+          "reachable": true
+        },
+        {
+          "ordinal": 7,
+          "kind": "block",
+          "label": "list",
+          "lines": [
+            14
+          ],
+          "condition": "list",
+          "fallThrough": 8,
+          "conditionalTarget": 10,
+          "conditionalLabel": "false",
+          "reachable": true
+        },
+        {
+          "ordinal": 8,
+          "kind": "block",
+          "label": "int\nConsole.WriteLine(v);",
+          "lines": [
+            14
+          ],
+          "fallThrough": 7,
+          "reachable": true
+        },
+        {
+          "ordinal": 9,
+          "kind": "block",
+          "label": "list",
+          "lines": [
+            14
+          ],
+          "reachable": true
+        },
+        {
+          "ordinal": 10,
+          "kind": "block",
+          "label": "list.Clear();\nConsole.WriteLine(list.Count);",
+          "lines": [
+            15,
+            16
+          ],
+          "fallThrough": 11,
+          "reachable": true
+        },
+        {
+          "ordinal": 11,
+          "kind": "exit",
+          "label": "end",
+          "lines": [],
+          "reachable": true
+        }
+      ],
+      "lineFacts": [
+        {
+          "line": 8,
+          "reads": [],
+          "writes": [
+            "list"
+          ]
+        },
+        {
+          "line": 9,
+          "reads": [
+            "i",
+            "list"
+          ],
+          "writes": [
+            "i"
+          ]
+        },
+        {
+          "line": 10,
+          "reads": [
+            "list"
+          ],
+          "writes": []
+        },
+        {
+          "line": 11,
+          "reads": [
+            "list"
+          ],
+          "writes": []
+        },
+        {
+          "line": 12,
+          "reads": [
+            "list"
+          ],
+          "writes": []
+        },
+        {
+          "line": 13,
+          "reads": [
+            "list"
+          ],
+          "writes": []
+        },
+        {
+          "line": 14,
+          "reads": [
+            "list",
+            "v"
+          ],
+          "writes": []
+        },
+        {
+          "line": 15,
+          "reads": [
+            "list"
+          ],
+          "writes": []
+        },
+        {
+          "line": 16,
+          "reads": [
+            "list"
+          ],
+          "writes": []
+        }
+      ]
+    }
+  ]
+}

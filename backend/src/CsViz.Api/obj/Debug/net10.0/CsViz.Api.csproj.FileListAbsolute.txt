@@ -1,0 +1,161 @@
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\appsettings.Development.json
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\appsettings.json
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Api.staticwebassets.endpoints.json
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Api.exe
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Api.deps.json
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Api.runtimeconfig.json
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Api.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Api.pdb
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\Microsoft.OpenApi.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.csproj.AssemblyReference.cache
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\rpswa.dswa.cache.json
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.GeneratedMSBuildEditorConfig.editorconfig
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.AssemblyInfoInputs.cache
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.AssemblyInfo.cs
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.csproj.CoreCompileInputs.cache
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.MvcApplicationPartsAssemblyInfo.cs
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.MvcApplicationPartsAssemblyInfo.cache
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\rjimswa.dswa.cache.json
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\scopedcss\bundle\CsViz.Api.styles.css
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\staticwebassets.build.json
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\staticwebassets.build.json.cache
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\staticwebassets.development.json
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\swae.build.ex.cache
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.csproj.Up2Date
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\refint\CsViz.Api.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.pdb
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.genruntimeconfig.cache
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\ref\CsViz.Api.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\Basic.Reference.Assemblies.Net80.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Analysis.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Core.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Trace.dll
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Analysis.pdb
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Core.pdb
+E:\beeviro\CS visualizer C#\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Trace.pdb
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\appsettings.Development.json
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\appsettings.json
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Api.staticwebassets.endpoints.json
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Api.exe
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Api.deps.json
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Api.runtimeconfig.json
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Api.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Api.pdb
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\Basic.Reference.Assemblies.Net80.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Analysis.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Core.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Trace.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Analysis.pdb
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Core.pdb
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Trace.pdb
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.csproj.AssemblyReference.cache
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\rpswa.dswa.cache.json
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.GeneratedMSBuildEditorConfig.editorconfig
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.AssemblyInfoInputs.cache
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.AssemblyInfo.cs
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.csproj.CoreCompileInputs.cache
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.MvcApplicationPartsAssemblyInfo.cache
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\rjimswa.dswa.cache.json
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\scopedcss\bundle\CsViz.Api.styles.css
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\staticwebassets.build.json
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\staticwebassets.build.json.cache
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\staticwebassets.development.json
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\swae.build.ex.cache
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.csproj.Up2Date
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\refint\CsViz.Api.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.pdb
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\CsViz.Api.genruntimeconfig.cache
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\obj\Debug\net10.0\ref\CsViz.Api.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\Microsoft.Data.Sqlite.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\SQLitePCLRaw.batteries_v2.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\SQLitePCLRaw.core.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\SQLitePCLRaw.provider.e_sqlite3.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\browser-wasm\nativeassets\net9.0\e_sqlite3.a
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\linux-arm\native\libe_sqlite3.so
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\linux-arm64\native\libe_sqlite3.so
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\linux-armel\native\libe_sqlite3.so
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\linux-mips64\native\libe_sqlite3.so
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\linux-musl-riscv64\native\libe_sqlite3.so
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\linux-musl-s390x\native\libe_sqlite3.so
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\linux-riscv64\native\libe_sqlite3.so
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\linux-s390x\native\libe_sqlite3.so
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\linux-x64\native\libe_sqlite3.so
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\linux-x86\native\libe_sqlite3.so
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\win-arm64\native\e_sqlite3.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\win-x64\native\e_sqlite3.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\runtimes\win-x86\native\e_sqlite3.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Ai.dll
+E:\beeviro\CS_visualizer_C_sharp\cs-visualizer\backend\src\CsViz.Api\bin\Debug\net10.0\CsViz.Ai.pdb

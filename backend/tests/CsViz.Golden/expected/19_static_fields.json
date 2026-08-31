@@ -1,0 +1,504 @@
+{
+  "version": 1,
+  "sourceHash": "dcd0e014ec550246efeefbd6af5a7fc3dcbb9ed84b7ad6ebd91b042d45ec4fd0",
+  "source": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        Counter.Increment();\n        Counter.Increment();\n        Counter.Increment();\n        Console.WriteLine(Counter.Count);\n        Counter.Reset();\n        Console.WriteLine(Counter.Count);\n        Console.WriteLine(Counter.Label);\n    }\n}\n\nclass Counter\n{\n    public static int Count;\n    public const string Label = \u0022counter\u0022;\n    public static void Increment() { Count = Count \u002B 1; }\n    public static void Reset() { Count = 0; }\n}\n",
+  "status": "ok",
+  "diagnostics": [],
+  "strings": [
+    "3\n",
+    "0\n",
+    "counter\n"
+  ],
+  "types": [
+    {
+      "id": 0,
+      "name": "Counter",
+      "kind": "class"
+    }
+  ],
+  "snapshots": [
+    {
+      "frames": [
+        {
+          "id": 1,
+          "methodName": "Main",
+          "declaringType": "Program",
+          "callLine": 0,
+          "slots": []
+        },
+        {
+          "id": 2,
+          "methodName": "Increment",
+          "declaringType": "Counter",
+          "callLine": 0,
+          "slots": []
+        }
+      ],
+      "heap": {},
+      "stdout": ""
+    }
+  ],
+  "keyframes": [
+    {
+      "stepIndex": 0,
+      "snapshotIndex": 0
+    }
+  ],
+  "steps": [
+    {
+      "i": 0,
+      "line": 7,
+      "col": 9,
+      "endLine": 7,
+      "endCol": 29,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "pushFrame",
+          {
+            "id": 1,
+            "methodName": "Main",
+            "declaringType": "Program",
+            "callLine": 0,
+            "slots": []
+          }
+        ],
+        [
+          "pushFrame",
+          {
+            "id": 2,
+            "methodName": "Increment",
+            "declaringType": "Counter",
+            "callLine": 0,
+            "slots": []
+          }
+        ]
+      ]
+    },
+    {
+      "i": 1,
+      "line": 21,
+      "col": 38,
+      "endLine": 21,
+      "endCol": 56,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "newObj",
+          1,
+          {
+            "k": "object",
+            "t": 0,
+            "fields": [
+              {
+                "name": "Count",
+                "value": {
+                  "k": "prim",
+                  "t": "int",
+                  "v": 0
+                }
+              }
+            ]
+          }
+        ],
+        [
+          "setField",
+          1,
+          "Count",
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 1
+          }
+        ]
+      ]
+    },
+    {
+      "i": 2,
+      "line": 7,
+      "col": 9,
+      "endLine": 7,
+      "endCol": 29,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "popFrame"
+        ]
+      ]
+    },
+    {
+      "i": 3,
+      "line": 8,
+      "col": 9,
+      "endLine": 8,
+      "endCol": 29,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "pushFrame",
+          {
+            "id": 2,
+            "methodName": "Increment",
+            "declaringType": "Counter",
+            "callLine": 0,
+            "slots": []
+          }
+        ]
+      ]
+    },
+    {
+      "i": 4,
+      "line": 21,
+      "col": 38,
+      "endLine": 21,
+      "endCol": 56,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "setField",
+          1,
+          "Count",
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 2
+          }
+        ]
+      ]
+    },
+    {
+      "i": 5,
+      "line": 8,
+      "col": 9,
+      "endLine": 8,
+      "endCol": 29,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "popFrame"
+        ]
+      ]
+    },
+    {
+      "i": 6,
+      "line": 9,
+      "col": 9,
+      "endLine": 9,
+      "endCol": 29,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "pushFrame",
+          {
+            "id": 2,
+            "methodName": "Increment",
+            "declaringType": "Counter",
+            "callLine": 0,
+            "slots": []
+          }
+        ]
+      ]
+    },
+    {
+      "i": 7,
+      "line": 21,
+      "col": 38,
+      "endLine": 21,
+      "endCol": 56,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "setField",
+          1,
+          "Count",
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 3
+          }
+        ]
+      ]
+    },
+    {
+      "i": 8,
+      "line": 9,
+      "col": 9,
+      "endLine": 9,
+      "endCol": 29,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "popFrame"
+        ]
+      ]
+    },
+    {
+      "i": 9,
+      "line": 10,
+      "col": 9,
+      "endLine": 10,
+      "endCol": 42,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          0
+        ]
+      ]
+    },
+    {
+      "i": 10,
+      "line": 11,
+      "col": 9,
+      "endLine": 11,
+      "endCol": 25,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "pushFrame",
+          {
+            "id": 2,
+            "methodName": "Reset",
+            "declaringType": "Counter",
+            "callLine": 0,
+            "slots": []
+          }
+        ]
+      ]
+    },
+    {
+      "i": 11,
+      "line": 22,
+      "col": 34,
+      "endLine": 22,
+      "endCol": 44,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "setField",
+          1,
+          "Count",
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 0
+          }
+        ]
+      ]
+    },
+    {
+      "i": 12,
+      "line": 11,
+      "col": 9,
+      "endLine": 11,
+      "endCol": 25,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "popFrame"
+        ]
+      ]
+    },
+    {
+      "i": 13,
+      "line": 12,
+      "col": 9,
+      "endLine": 12,
+      "endCol": 42,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          1
+        ]
+      ]
+    },
+    {
+      "i": 14,
+      "line": 13,
+      "col": 9,
+      "endLine": 13,
+      "endCol": 42,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          2
+        ]
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "name": "Main",
+      "declaringType": "Program",
+      "startLine": 5,
+      "endLine": 14,
+      "blocks": [
+        {
+          "ordinal": 0,
+          "kind": "entry",
+          "label": "start",
+          "lines": [],
+          "fallThrough": 1,
+          "reachable": true
+        },
+        {
+          "ordinal": 1,
+          "kind": "block",
+          "label": "Counter.Increment();\nCounter.Increment();\nCounter.Increment();\nConsole.WriteLine(Counter.Count);\nCounter.Reset();\nConsole.WriteLine(Counter.Count);\nConsole.WriteLine(Counter.Label);",
+          "lines": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "fallThrough": 2,
+          "reachable": true
+        },
+        {
+          "ordinal": 2,
+          "kind": "exit",
+          "label": "end",
+          "lines": [],
+          "reachable": true
+        }
+      ],
+      "lineFacts": [
+        {
+          "line": 7,
+          "reads": [],
+          "writes": []
+        },
+        {
+          "line": 8,
+          "reads": [],
+          "writes": []
+        },
+        {
+          "line": 9,
+          "reads": [],
+          "writes": []
+        },
+        {
+          "line": 10,
+          "reads": [],
+          "writes": []
+        },
+        {
+          "line": 11,
+          "reads": [],
+          "writes": []
+        },
+        {
+          "line": 12,
+          "reads": [],
+          "writes": []
+        },
+        {
+          "line": 13,
+          "reads": [],
+          "writes": []
+        }
+      ]
+    },
+    {
+      "name": "Increment",
+      "declaringType": "Counter",
+      "startLine": 21,
+      "endLine": 21,
+      "blocks": [
+        {
+          "ordinal": 0,
+          "kind": "entry",
+          "label": "start",
+          "lines": [],
+          "fallThrough": 1,
+          "reachable": true
+        },
+        {
+          "ordinal": 1,
+          "kind": "block",
+          "label": "Count = Count \u002B 1;",
+          "lines": [
+            21
+          ],
+          "fallThrough": 2,
+          "reachable": true
+        },
+        {
+          "ordinal": 2,
+          "kind": "exit",
+          "label": "end",
+          "lines": [],
+          "reachable": true
+        }
+      ],
+      "lineFacts": [
+        {
+          "line": 21,
+          "reads": [],
+          "writes": []
+        }
+      ]
+    },
+    {
+      "name": "Reset",
+      "declaringType": "Counter",
+      "startLine": 22,
+      "endLine": 22,
+      "blocks": [
+        {
+          "ordinal": 0,
+          "kind": "entry",
+          "label": "start",
+          "lines": [],
+          "fallThrough": 1,
+          "reachable": true
+        },
+        {
+          "ordinal": 1,
+          "kind": "block",
+          "label": "Count = 0;",
+          "lines": [
+            22
+          ],
+          "fallThrough": 2,
+          "reachable": true
+        },
+        {
+          "ordinal": 2,
+          "kind": "exit",
+          "label": "end",
+          "lines": [],
+          "reachable": true
+        }
+      ],
+      "lineFacts": [
+        {
+          "line": 22,
+          "reads": [],
+          "writes": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CsViz.Ai/CsViz.Ai.csproj" />
+    <Project Path="src/CsViz.Analysis/CsViz.Analysis.csproj" />
+    <Project Path="src/CsViz.Api/CsViz.Api.csproj" />
+    <Project Path="src/CsViz.Core/CsViz.Core.csproj" />
+    <Project Path="src/CsViz.Trace/CsViz.Trace.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/CsViz.Ai.Tests/CsViz.Ai.Tests.csproj" />
+    <Project Path="tests/CsViz.Core.Tests/CsViz.Core.Tests.csproj" />
+    <Project Path="tests/CsViz.Differential/CsViz.Differential.csproj" />
+    <Project Path="tests/CsViz.Golden/CsViz.Golden.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,1080 @@
+{
+  "version": 1,
+  "sourceHash": "43fec6f57425dfcdcfa73f6ea11c0fb24f212a3b337e46ee9f0e1f1b700a44b3",
+  "source": "using System;\n\npartial class Program\n{\n    static void Main()\n    {\n        Animal a = new Dog(\u0022Rex\u0022);\n        Console.WriteLine(a.Speak());\n        Console.WriteLine(a.Name);\n        Animal b = new Cat(\u0022Tom\u0022);\n        Console.WriteLine(b.Speak());\n        Console.WriteLine(Describe(a));\n        Console.WriteLine(Describe(b));\n    }\n}\n\npartial class Program\n{\n    static string Describe(Animal a) { return a.Name \u002B \u0022 says \u0022 \u002B a.Speak(); }\n}\n\nclass Animal\n{\n    public string Name;\n    public Animal(string name) { Name = name; }\n    public virtual string Speak() { return \u0022...\u0022; }\n}\n\nclass Dog : Animal\n{\n    public Dog(string name) : base(name) { }\n    public override string Speak() { return \u0022Woof\u0022; }\n}\n\nclass Cat : Animal\n{\n    public Cat(string name) : base(name) { }\n    public override string Speak() { return \u0022Meow\u0022; }\n}\n",
+  "status": "ok",
+  "diagnostics": [],
+  "strings": [
+    "Woof\n",
+    "Rex\n",
+    "Meow\n",
+    "Rex says Woof\n",
+    "Tom says Meow\n"
+  ],
+  "types": [
+    {
+      "id": 0,
+      "name": "Dog",
+      "kind": "class"
+    },
+    {
+      "id": 1,
+      "name": "Cat",
+      "kind": "class"
+    }
+  ],
+  "snapshots": [
+    {
+      "frames": [
+        {
+          "id": 1,
+          "methodName": "Main",
+          "declaringType": "Program",
+          "callLine": 0,
+          "slots": [
+            {
+              "slotId": 1,
+              "name": "a",
+              "kind": "local",
+              "declaredLine": 7,
+              "inScope": true,
+              "value": {
+                "k": "unset"
+              }
+            },
+            {
+              "slotId": 2,
+              "name": "b",
+              "kind": "local",
+              "declaredLine": 10,
+              "inScope": true,
+              "value": {
+                "k": "unset"
+              }
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "methodName": ".ctor",
+          "declaringType": "Dog",
+          "callLine": 0,
+          "slots": [
+            {
+              "slotId": 1,
+              "name": "name",
+              "kind": "param",
+              "declaredLine": 0,
+              "inScope": true,
+              "value": {
+                "k": "prim",
+                "t": "string",
+                "v": "Rex"
+              }
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "methodName": ".ctor",
+          "declaringType": "Animal",
+          "callLine": 0,
+          "slots": [
+            {
+              "slotId": 1,
+              "name": "name",
+              "kind": "param",
+              "declaredLine": 0,
+              "inScope": true,
+              "value": {
+                "k": "prim",
+                "t": "string",
+                "v": "Rex"
+              }
+            }
+          ]
+        }
+      ],
+      "heap": {
+        "1": {
+          "k": "object",
+          "t": 0,
+          "fields": [
+            {
+              "name": "Name",
+              "value": {
+                "k": "null"
+              }
+            }
+          ]
+        }
+      },
+      "stdout": ""
+    }
+  ],
+  "keyframes": [
+    {
+      "stepIndex": 0,
+      "snapshotIndex": 0
+    }
+  ],
+  "steps": [
+    {
+      "i": 0,
+      "line": 7,
+      "col": 9,
+      "endLine": 7,
+      "endCol": 35,
+      "kind": "stmt",
+      "frameDepth": 3,
+      "delta": [
+        [
+          "pushFrame",
+          {
+            "id": 1,
+            "methodName": "Main",
+            "declaringType": "Program",
+            "callLine": 0,
+            "slots": [
+              {
+                "slotId": 1,
+                "name": "a",
+                "kind": "local",
+                "declaredLine": 7,
+                "inScope": false,
+                "value": {
+                  "k": "unset"
+                }
+              },
+              {
+                "slotId": 2,
+                "name": "b",
+                "kind": "local",
+                "declaredLine": 10,
+                "inScope": false,
+                "value": {
+                  "k": "unset"
+                }
+              }
+            ]
+          }
+        ],
+        [
+          "scope",
+          1,
+          1,
+          true
+        ],
+        [
+          "scope",
+          1,
+          2,
+          true
+        ],
+        [
+          "newObj",
+          1,
+          {
+            "k": "object",
+            "t": 0,
+            "fields": [
+              {
+                "name": "Name",
+                "value": {
+                  "k": "null"
+                }
+              }
+            ]
+          }
+        ],
+        [
+          "pushFrame",
+          {
+            "id": 2,
+            "methodName": ".ctor",
+            "declaringType": "Dog",
+            "callLine": 0,
+            "slots": [
+              {
+                "slotId": 1,
+                "name": "name",
+                "kind": "param",
+                "declaredLine": 0,
+                "inScope": true,
+                "value": {
+                  "k": "prim",
+                  "t": "string",
+                  "v": "Rex"
+                }
+              }
+            ]
+          }
+        ],
+        [
+          "pushFrame",
+          {
+            "id": 3,
+            "methodName": ".ctor",
+            "declaringType": "Animal",
+            "callLine": 0,
+            "slots": [
+              {
+                "slotId": 1,
+                "name": "name",
+                "kind": "param",
+                "declaredLine": 0,
+                "inScope": true,
+                "value": {
+                  "k": "prim",
+                  "t": "string",
+                  "v": "Rex"
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "i": 1,
+      "line": 25,
+      "col": 34,
+      "endLine": 25,
+      "endCol": 46,
+      "kind": "stmt",
+      "frameDepth": 3,
+      "delta": [
+        [
+          "setField",
+          1,
+          "Name",
+          {
+            "k": "prim",
+            "t": "string",
+            "v": "Rex"
+          }
+        ]
+      ]
+    },
+    {
+      "i": 2,
+      "line": 7,
+      "col": 9,
+      "endLine": 7,
+      "endCol": 35,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "popFrame"
+        ],
+        [
+          "popFrame"
+        ],
+        [
+          "setLocal",
+          1,
+          1,
+          {
+            "k": "ref",
+            "id": 1
+          }
+        ]
+      ]
+    },
+    {
+      "i": 3,
+      "line": 8,
+      "col": 9,
+      "endLine": 8,
+      "endCol": 38,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "pushFrame",
+          {
+            "id": 2,
+            "methodName": "Speak",
+            "declaringType": "Dog",
+            "callLine": 0,
+            "slots": []
+          }
+        ]
+      ]
+    },
+    {
+      "i": 4,
+      "line": 32,
+      "col": 38,
+      "endLine": 32,
+      "endCol": 52,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": []
+    },
+    {
+      "i": 5,
+      "line": 8,
+      "col": 9,
+      "endLine": 8,
+      "endCol": 38,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "popFrame"
+        ],
+        [
+          "stdout",
+          0
+        ]
+      ]
+    },
+    {
+      "i": 6,
+      "line": 9,
+      "col": 9,
+      "endLine": 9,
+      "endCol": 35,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          1
+        ]
+      ]
+    },
+    {
+      "i": 7,
+      "line": 10,
+      "col": 9,
+      "endLine": 10,
+      "endCol": 35,
+      "kind": "stmt",
+      "frameDepth": 3,
+      "delta": [
+        [
+          "newObj",
+          2,
+          {
+            "k": "object",
+            "t": 1,
+            "fields": [
+              {
+                "name": "Name",
+                "value": {
+                  "k": "null"
+                }
+              }
+            ]
+          }
+        ],
+        [
+          "pushFrame",
+          {
+            "id": 2,
+            "methodName": ".ctor",
+            "declaringType": "Cat",
+            "callLine": 0,
+            "slots": [
+              {
+                "slotId": 1,
+                "name": "name",
+                "kind": "param",
+                "declaredLine": 0,
+                "inScope": true,
+                "value": {
+                  "k": "prim",
+                  "t": "string",
+                  "v": "Tom"
+                }
+              }
+            ]
+          }
+        ],
+        [
+          "pushFrame",
+          {
+            "id": 3,
+            "methodName": ".ctor",
+            "declaringType": "Animal",
+            "callLine": 0,
+            "slots": [
+              {
+                "slotId": 1,
+                "name": "name",
+                "kind": "param",
+                "declaredLine": 0,
+                "inScope": true,
+                "value": {
+                  "k": "prim",
+                  "t": "string",
+                  "v": "Tom"
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "i": 8,
+      "line": 25,
+      "col": 34,
+      "endLine": 25,
+      "endCol": 46,
+      "kind": "stmt",
+      "frameDepth": 3,
+      "delta": [
+        [
+          "setField",
+          2,
+          "Name",
+          {
+            "k": "prim",
+            "t": "string",
+            "v": "Tom"
+          }
+        ]
+      ]
+    },
+    {
+      "i": 9,
+      "line": 10,
+      "col": 9,
+      "endLine": 10,
+      "endCol": 35,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "popFrame"
+        ],
+        [
+          "popFrame"
+        ],
+        [
+          "setLocal",
+          1,
+          2,
+          {
+            "k": "ref",
+            "id": 2
+          }
+        ]
+      ]
+    },
+    {
+      "i": 10,
+      "line": 11,
+      "col": 9,
+      "endLine": 11,
+      "endCol": 38,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "pushFrame",
+          {
+            "id": 2,
+            "methodName": "Speak",
+            "declaringType": "Cat",
+            "callLine": 0,
+            "slots": []
+          }
+        ]
+      ]
+    },
+    {
+      "i": 11,
+      "line": 38,
+      "col": 38,
+      "endLine": 38,
+      "endCol": 52,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": []
+    },
+    {
+      "i": 12,
+      "line": 11,
+      "col": 9,
+      "endLine": 11,
+      "endCol": 38,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "popFrame"
+        ],
+        [
+          "stdout",
+          2
+        ]
+      ]
+    },
+    {
+      "i": 13,
+      "line": 12,
+      "col": 9,
+      "endLine": 12,
+      "endCol": 40,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "pushFrame",
+          {
+            "id": 2,
+            "methodName": "Describe",
+            "declaringType": "Program",
+            "callLine": 0,
+            "slots": [
+              {
+                "slotId": 1,
+                "name": "a",
+                "kind": "param",
+                "declaredLine": 0,
+                "inScope": true,
+                "value": {
+                  "k": "ref",
+                  "id": 1
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "i": 14,
+      "line": 19,
+      "col": 40,
+      "endLine": 19,
+      "endCol": 77,
+      "kind": "stmt",
+      "frameDepth": 3,
+      "delta": [
+        [
+          "pushFrame",
+          {
+            "id": 3,
+            "methodName": "Speak",
+            "declaringType": "Dog",
+            "callLine": 0,
+            "slots": []
+          }
+        ]
+      ]
+    },
+    {
+      "i": 15,
+      "line": 32,
+      "col": 38,
+      "endLine": 32,
+      "endCol": 52,
+      "kind": "stmt",
+      "frameDepth": 3,
+      "delta": []
+    },
+    {
+      "i": 16,
+      "line": 19,
+      "col": 40,
+      "endLine": 19,
+      "endCol": 77,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "popFrame"
+        ]
+      ]
+    },
+    {
+      "i": 17,
+      "line": 12,
+      "col": 9,
+      "endLine": 12,
+      "endCol": 40,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "popFrame"
+        ],
+        [
+          "stdout",
+          3
+        ]
+      ]
+    },
+    {
+      "i": 18,
+      "line": 13,
+      "col": 9,
+      "endLine": 13,
+      "endCol": 40,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "pushFrame",
+          {
+            "id": 2,
+            "methodName": "Describe",
+            "declaringType": "Program",
+            "callLine": 0,
+            "slots": [
+              {
+                "slotId": 1,
+                "name": "a",
+                "kind": "param",
+                "declaredLine": 0,
+                "inScope": true,
+                "value": {
+                  "k": "ref",
+                  "id": 2
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "i": 19,
+      "line": 19,
+      "col": 40,
+      "endLine": 19,
+      "endCol": 77,
+      "kind": "stmt",
+      "frameDepth": 3,
+      "delta": [
+        [
+          "pushFrame",
+          {
+            "id": 3,
+            "methodName": "Speak",
+            "declaringType": "Cat",
+            "callLine": 0,
+            "slots": []
+          }
+        ]
+      ]
+    },
+    {
+      "i": 20,
+      "line": 38,
+      "col": 38,
+      "endLine": 38,
+      "endCol": 52,
+      "kind": "stmt",
+      "frameDepth": 3,
+      "delta": []
+    },
+    {
+      "i": 21,
+      "line": 19,
+      "col": 40,
+      "endLine": 19,
+      "endCol": 77,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "popFrame"
+        ]
+      ]
+    },
+    {
+      "i": 22,
+      "line": 13,
+      "col": 9,
+      "endLine": 13,
+      "endCol": 40,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "popFrame"
+        ],
+        [
+          "stdout",
+          4
+        ]
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "name": "Main",
+      "declaringType": "Program",
+      "startLine": 5,
+      "endLine": 14,
+      "blocks": [
+        {
+          "ordinal": 0,
+          "kind": "entry",
+          "label": "start",
+          "lines": [],
+          "fallThrough": 1,
+          "reachable": true
+        },
+        {
+          "ordinal": 1,
+          "kind": "block",
+          "label": "a = new Dog(\u0022Rex\u0022)\nConsole.WriteLine(a.Speak());\nConsole.WriteLine(a.Name);\nb = new Cat(\u0022Tom\u0022)\nConsole.WriteLine(b.Speak());\nConsole.WriteLine(Describe(a));\nConsole.WriteLine(Describe(b));",
+          "lines": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "fallThrough": 2,
+          "reachable": true
+        },
+        {
+          "ordinal": 2,
+          "kind": "exit",
+          "label": "end",
+          "lines": [],
+          "reachable": true
+        }
+      ],
+      "lineFacts": [
+        {
+          "line": 7,
+          "reads": [],
+          "writes": [
+            "a"
+          ]
+        },
+        {
+          "line": 8,
+          "reads": [
+            "a"
+          ],
+          "writes": []
+        },
+        {
+          "line": 9,
+          "reads": [
+            "a"
+          ],
+          "writes": []
+        },
+        {
+          "line": 10,
+          "reads": [],
+          "writes": [
+            "b"
+          ]
+        },
+        {
+          "line": 11,
+          "reads": [
+            "b"
+          ],
+          "writes": []
+        },
+        {
+          "line": 12,
+          "reads": [
+            "a"
+          ],
+          "writes": []
+        },
+        {
+          "line": 13,
+          "reads": [
+            "b"
+          ],
+          "writes": []
+        }
+      ]
+    },
+    {
+      "name": "Describe",
+      "declaringType": "Program",
+      "startLine": 19,
+      "endLine": 19,
+      "blocks": [
+        {
+          "ordinal": 0,
+          "kind": "entry",
+          "label": "start",
+          "lines": [],
+          "fallThrough": 1,
+          "reachable": true
+        },
+        {
+          "ordinal": 1,
+          "kind": "block",
+          "label": "a.Name \u002B \u0022 says \u0022 \u002B a.Speak()",
+          "lines": [
+            19
+          ],
+          "condition": "a.Name \u002B \u0022 says \u0022 \u002B a.Speak()",
+          "fallThrough": 2,
+          "reachable": true
+        },
+        {
+          "ordinal": 2,
+          "kind": "exit",
+          "label": "end",
+          "lines": [],
+          "reachable": true
+        }
+      ],
+      "lineFacts": [
+        {
+          "line": 19,
+          "reads": [
+            "a"
+          ],
+          "writes": []
+        }
+      ]
+    },
+    {
+      "name": ".ctor",
+      "declaringType": "Animal",
+      "startLine": 25,
+      "endLine": 25,
+      "blocks": [
+        {
+          "ordinal": 0,
+          "kind": "entry",
+          "label": "start",
+          "lines": [],
+          "fallThrough": 1,
+          "reachable": true
+        },
+        {
+          "ordinal": 1,
+          "kind": "block",
+          "label": "public Animal(string name) { Name = name; }\nName = name;",
+          "lines": [
+            25
+          ],
+          "fallThrough": 2,
+          "reachable": true
+        },
+        {
+          "ordinal": 2,
+          "kind": "exit",
+          "label": "end",
+          "lines": [],
+          "reachable": true
+        }
+      ],
+      "lineFacts": [
+        {
+          "line": 25,
+          "reads": [
+            "name",
+            "this"
+          ],
+          "writes": []
+        }
+      ]
+    },
+    {
+      "name": "Speak",
+      "declaringType": "Animal",
+      "startLine": 26,
+      "endLine": 26,
+      "blocks": [
+        {
+          "ordinal": 0,
+          "kind": "entry",
+          "label": "start",
+          "lines": [],
+          "fallThrough": 1,
+          "reachable": true
+        },
+        {
+          "ordinal": 1,
+          "kind": "block",
+          "label": "\u0022...\u0022",
+          "lines": [
+            26
+          ],
+          "condition": "\u0022...\u0022",
+          "fallThrough": 2,
+          "reachable": true
+        },
+        {
+          "ordinal": 2,
+          "kind": "exit",
+          "label": "end",
+          "lines": [],
+          "reachable": true
+        }
+      ],
+      "lineFacts": [
+        {
+          "line": 26,
+          "reads": [],
+          "writes": []
+        }
+      ]
+    },
+    {
+      "name": ".ctor",
+      "declaringType": "Dog",
+      "startLine": 31,
+      "endLine": 31,
+      "blocks": [
+        {
+          "ordinal": 0,
+          "kind": "entry",
+          "label": "start",
+          "lines": [],
+          "fallThrough": 1,
+          "reachable": true
+        },
+        {
+          "ordinal": 1,
+          "kind": "block",
+          "label": ": base(name)",
+          "lines": [
+            31
+          ],
+          "fallThrough": 2,
+          "reachable": true
+        },
+        {
+          "ordinal": 2,
+          "kind": "exit",
+          "label": "end",
+          "lines": [],
+          "reachable": true
+        }
+      ],
+      "lineFacts": []
+    },
+    {
+      "name": "Speak",
+      "declaringType": "Dog",
+      "startLine": 32,
+      "endLine": 32,
+      "blocks": [
+        {
+          "ordinal": 0,
+          "kind": "entry",
+          "label": "start",
+          "lines": [],
+          "fallThrough": 1,
+          "reachable": true
+        },
+        {
+          "ordinal": 1,
+          "kind": "block",
+          "label": "\u0022Woof\u0022",
+          "lines": [
+            32
+          ],
+          "condition": "\u0022Woof\u0022",
+          "fallThrough": 2,
+          "reachable": true
+        },
+        {
+          "ordinal": 2,
+          "kind": "exit",
+          "label": "end",
+          "lines": [],
+          "reachable": true
+        }
+      ],
+      "lineFacts": [
+        {
+          "line": 32,
+          "reads": [],
+          "writes": []
+        }
+      ]
+    },
+    {
+      "name": ".ctor",
+      "declaringType": "Cat",
+      "startLine": 37,
+      "endLine": 37,
+      "blocks": [
+        {
+          "ordinal": 0,
+          "kind": "entry",
+          "label": "start",
+          "lines": [],
+          "fallThrough": 1,
+          "reachable": true
+        },
+        {
+          "ordinal": 1,
+          "kind": "block",
+          "label": ": base(name)",
+          "lines": [
+            37
+          ],
+          "fallThrough": 2,
+          "reachable": true
+        },
+        {
+          "ordinal": 2,
+          "kind": "exit",
+          "label": "end",
+          "lines": [],
+          "reachable": true
+        }
+      ],
+      "lineFacts": []
+    },
+    {
+      "name": "Speak",
+      "declaringType": "Cat",
+      "startLine": 38,
+      "endLine": 38,
+      "blocks": [
+        {
+          "ordinal": 0,
+          "kind": "entry",
+          "label": "start",
+          "lines": [],
+          "fallThrough": 1,
+          "reachable": true
+        },
+        {
+          "ordinal": 1,
+          "kind": "block",
+          "label": "\u0022Meow\u0022",
+          "lines": [
+            38
+          ],
+          "condition": "\u0022Meow\u0022",
+          "fallThrough": 2,
+          "reachable": true
+        },
+        {
+          "ordinal": 2,
+          "kind": "exit",
+          "label": "end",
+          "lines": [],
+          "reachable": true
+        }
+      ],
+      "lineFacts": [
+        {
+          "line": 38,
+          "reads": [],
+          "writes": []
+        }
+      ]
+    }
+  ]
+}

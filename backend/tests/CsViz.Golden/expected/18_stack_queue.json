@@ -1,0 +1,692 @@
+{
+  "version": 1,
+  "sourceHash": "5742e9ec4f903eb32d69d9b47da1f0c8f8709ab578071b77d5c9c8cb83babf5e",
+  "source": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        var stack = new Stack\u003Cint\u003E();\n        stack.Push(1);\n        stack.Push(2);\n        stack.Push(3);\n        Console.WriteLine(stack.Count);\n        Console.WriteLine(stack.Peek());\n        Console.WriteLine(stack.Pop());\n        Console.WriteLine(stack.Pop());\n        var queue = new Queue\u003Cstring\u003E();\n        queue.Enqueue(\u0022a\u0022);\n        queue.Enqueue(\u0022b\u0022);\n        Console.WriteLine(queue.Count);\n        Console.WriteLine(queue.Peek());\n        Console.WriteLine(queue.Dequeue());\n        Console.WriteLine(queue.Dequeue());\n    }\n}\n",
+  "status": "ok",
+  "diagnostics": [],
+  "strings": [
+    "3\n",
+    "2\n",
+    "a\n",
+    "b\n"
+  ],
+  "types": [
+    {
+      "id": 0,
+      "name": "System.Collections.Generic.Stack\u003Cint\u003E",
+      "kind": "class"
+    },
+    {
+      "id": 1,
+      "name": "System.Collections.Generic.Queue\u003Cstring\u003E",
+      "kind": "class"
+    }
+  ],
+  "snapshots": [
+    {
+      "frames": [
+        {
+          "id": 1,
+          "methodName": "Main",
+          "declaringType": "Program",
+          "callLine": 0,
+          "slots": [
+            {
+              "slotId": 1,
+              "name": "stack",
+              "kind": "local",
+              "declaredLine": 8,
+              "inScope": true,
+              "value": {
+                "k": "ref",
+                "id": 1
+              }
+            },
+            {
+              "slotId": 2,
+              "name": "queue",
+              "kind": "local",
+              "declaredLine": 16,
+              "inScope": true,
+              "value": {
+                "k": "unset"
+              }
+            }
+          ]
+        }
+      ],
+      "heap": {
+        "1": {
+          "k": "seq",
+          "t": 0,
+          "kind": "stack",
+          "items": []
+        }
+      },
+      "stdout": ""
+    }
+  ],
+  "keyframes": [
+    {
+      "stepIndex": 0,
+      "snapshotIndex": 0
+    }
+  ],
+  "steps": [
+    {
+      "i": 0,
+      "line": 8,
+      "col": 9,
+      "endLine": 8,
+      "endCol": 38,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "pushFrame",
+          {
+            "id": 1,
+            "methodName": "Main",
+            "declaringType": "Program",
+            "callLine": 0,
+            "slots": [
+              {
+                "slotId": 1,
+                "name": "stack",
+                "kind": "local",
+                "declaredLine": 8,
+                "inScope": false,
+                "value": {
+                  "k": "unset"
+                }
+              },
+              {
+                "slotId": 2,
+                "name": "queue",
+                "kind": "local",
+                "declaredLine": 16,
+                "inScope": false,
+                "value": {
+                  "k": "unset"
+                }
+              }
+            ]
+          }
+        ],
+        [
+          "scope",
+          1,
+          1,
+          true
+        ],
+        [
+          "scope",
+          1,
+          2,
+          true
+        ],
+        [
+          "newObj",
+          1,
+          {
+            "k": "object",
+            "t": 0,
+            "fields": []
+          }
+        ],
+        [
+          "newObj",
+          1,
+          {
+            "k": "seq",
+            "t": 0,
+            "kind": "stack",
+            "items": []
+          }
+        ],
+        [
+          "setLocal",
+          1,
+          1,
+          {
+            "k": "ref",
+            "id": 1
+          }
+        ]
+      ]
+    },
+    {
+      "i": 1,
+      "line": 9,
+      "col": 9,
+      "endLine": 9,
+      "endCol": 23,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "newObj",
+          1,
+          {
+            "k": "seq",
+            "t": 0,
+            "kind": "stack",
+            "items": [
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 1
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "i": 2,
+      "line": 10,
+      "col": 9,
+      "endLine": 10,
+      "endCol": 23,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "newObj",
+          1,
+          {
+            "k": "seq",
+            "t": 0,
+            "kind": "stack",
+            "items": [
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 1
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 2
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "i": 3,
+      "line": 11,
+      "col": 9,
+      "endLine": 11,
+      "endCol": 23,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "newObj",
+          1,
+          {
+            "k": "seq",
+            "t": 0,
+            "kind": "stack",
+            "items": [
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 1
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 2
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 3
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "i": 4,
+      "line": 12,
+      "col": 9,
+      "endLine": 12,
+      "endCol": 40,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          0
+        ]
+      ]
+    },
+    {
+      "i": 5,
+      "line": 13,
+      "col": 9,
+      "endLine": 13,
+      "endCol": 41,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          0
+        ]
+      ]
+    },
+    {
+      "i": 6,
+      "line": 14,
+      "col": 9,
+      "endLine": 14,
+      "endCol": 40,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "newObj",
+          1,
+          {
+            "k": "seq",
+            "t": 0,
+            "kind": "stack",
+            "items": [
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 1
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 2
+              }
+            ]
+          }
+        ],
+        [
+          "stdout",
+          0
+        ]
+      ]
+    },
+    {
+      "i": 7,
+      "line": 15,
+      "col": 9,
+      "endLine": 15,
+      "endCol": 40,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "newObj",
+          1,
+          {
+            "k": "seq",
+            "t": 0,
+            "kind": "stack",
+            "items": [
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 1
+              }
+            ]
+          }
+        ],
+        [
+          "stdout",
+          1
+        ]
+      ]
+    },
+    {
+      "i": 8,
+      "line": 16,
+      "col": 9,
+      "endLine": 16,
+      "endCol": 41,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "newObj",
+          2,
+          {
+            "k": "object",
+            "t": 1,
+            "fields": []
+          }
+        ],
+        [
+          "newObj",
+          2,
+          {
+            "k": "seq",
+            "t": 1,
+            "kind": "queue",
+            "items": []
+          }
+        ],
+        [
+          "setLocal",
+          1,
+          2,
+          {
+            "k": "ref",
+            "id": 2
+          }
+        ]
+      ]
+    },
+    {
+      "i": 9,
+      "line": 17,
+      "col": 9,
+      "endLine": 17,
+      "endCol": 28,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "newObj",
+          2,
+          {
+            "k": "seq",
+            "t": 1,
+            "kind": "queue",
+            "items": [
+              {
+                "k": "prim",
+                "t": "string",
+                "v": "a"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "i": 10,
+      "line": 18,
+      "col": 9,
+      "endLine": 18,
+      "endCol": 28,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "newObj",
+          2,
+          {
+            "k": "seq",
+            "t": 1,
+            "kind": "queue",
+            "items": [
+              {
+                "k": "prim",
+                "t": "string",
+                "v": "a"
+              },
+              {
+                "k": "prim",
+                "t": "string",
+                "v": "b"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "i": 11,
+      "line": 19,
+      "col": 9,
+      "endLine": 19,
+      "endCol": 40,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          1
+        ]
+      ]
+    },
+    {
+      "i": 12,
+      "line": 20,
+      "col": 9,
+      "endLine": 20,
+      "endCol": 41,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          2
+        ]
+      ]
+    },
+    {
+      "i": 13,
+      "line": 21,
+      "col": 9,
+      "endLine": 21,
+      "endCol": 44,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "newObj",
+          2,
+          {
+            "k": "seq",
+            "t": 1,
+            "kind": "queue",
+            "items": [
+              {
+                "k": "prim",
+                "t": "string",
+                "v": "b"
+              }
+            ]
+          }
+        ],
+        [
+          "stdout",
+          2
+        ]
+      ]
+    },
+    {
+      "i": 14,
+      "line": 22,
+      "col": 9,
+      "endLine": 22,
+      "endCol": 44,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "newObj",
+          2,
+          {
+            "k": "seq",
+            "t": 1,
+            "kind": "queue",
+            "items": []
+          }
+        ],
+        [
+          "stdout",
+          3
+        ]
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "name": "Main",
+      "declaringType": "Program",
+      "startLine": 6,
+      "endLine": 23,
+      "blocks": [
+        {
+          "ordinal": 0,
+          "kind": "entry",
+          "label": "start",
+          "lines": [],
+          "fallThrough": 1,
+          "reachable": true
+        },
+        {
+          "ordinal": 1,
+          "kind": "block",
+          "label": "stack = new Stack\u003Cint\u003E()\nstack.Push(1);\nstack.Push(2);\nstack.Push(3);\nConsole.WriteLine(stack.Count);\nConsole.WriteLine(stack.Peek());\nConsole.WriteLine(stack.Pop());\nConsole.WriteLine(stack.Pop());\nqueue = new Queue\u003Cstring\u003E()\nqueue.Enqueue(\u0022a\u0022);\nqueue.Enqueue(\u0022b\u0022);\nConsole.WriteLine(queue.Count);\nConsole.WriteLine(queue.Peek());\nConsole.WriteLine(queue.Dequeue());\nConsole.WriteLine(queue.Dequeue());",
+          "lines": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "fallThrough": 2,
+          "reachable": true
+        },
+        {
+          "ordinal": 2,
+          "kind": "exit",
+          "label": "end",
+          "lines": [],
+          "reachable": true
+        }
+      ],
+      "lineFacts": [
+        {
+          "line": 8,
+          "reads": [],
+          "writes": [
+            "stack"
+          ]
+        },
+        {
+          "line": 9,
+          "reads": [
+            "stack"
+          ],
+          "writes": []
+        },
+        {
+          "line": 10,
+          "reads": [
+            "stack"
+          ],
+          "writes": []
+        },
+        {
+          "line": 11,
+          "reads": [
+            "stack"
+          ],
+          "writes": []
+        },
+        {
+          "line": 12,
+          "reads": [
+            "stack"
+          ],
+          "writes": []
+        },
+        {
+          "line": 13,
+          "reads": [
+            "stack"
+          ],
+          "writes": []
+        },
+        {
+          "line": 14,
+          "reads": [
+            "stack"
+          ],
+          "writes": []
+        },
+        {
+          "line": 15,
+          "reads": [
+            "stack"
+          ],
+          "writes": []
+        },
+        {
+          "line": 16,
+          "reads": [],
+          "writes": [
+            "queue"
+          ]
+        },
+        {
+          "line": 17,
+          "reads": [
+            "queue"
+          ],
+          "writes": []
+        },
+        {
+          "line": 18,
+          "reads": [
+            "queue"
+          ],
+          "writes": []
+        },
+        {
+          "line": 19,
+          "reads": [
+            "queue"
+          ],
+          "writes": []
+        },
+        {
+          "line": 20,
+          "reads": [
+            "queue"
+          ],
+          "writes": []
+        },
+        {
+          "line": 21,
+          "reads": [
+            "queue"
+          ],
+          "writes": []
+        },
+        {
+          "line": 22,
+          "reads": [
+            "queue"
+          ],
+          "writes": []
+        }
+      ]
+    }
+  ]
+}

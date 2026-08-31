@@ -1,0 +1,36 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
+
+  <!--
+    One version per package, for the whole solution.
+
+    CsViz.Analysis used to pin Roslyn 5.9.0 while CsViz.Core pinned 4.11.0. NuGet resolves the
+    higher version, so Core was compiled against one Roslyn and executed against another - the
+    IOperation shapes the interpreter reads are exactly the surface where that goes wrong, and
+    it fails at runtime rather than at build time. Central management makes the version a
+    single deliberate decision, as the plan requires.
+  -->
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="5.9.0" />
+    <PackageVersion Include="Basic.Reference.Assemblies.Net80" Version="1.8.11" />
+    <PackageVersion Include="Microsoft.Data.Sqlite" Version="10.0.11" />
+  </ItemGroup>
+
+  <!--
+    Deliberately absent:
+      Microsoft.AspNetCore.OpenApi - was referenced but never called, and dragged in
+        Microsoft.OpenApi 2.0.0, which carries a high-severity advisory (GHSA-v5pm-xwqc-g5wc).
+        The API has one documented endpoint; a generated schema is not worth a live CVE.
+      System.Collections.Immutable - part of the net10.0 shared framework already.
+  -->
+
+  <ItemGroup Label="Testing">
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageVersion Include="xunit" Version="2.9.3" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.4" />
+    <PackageVersion Include="coverlet.collector" Version="6.0.4" />
+  </ItemGroup>
+</Project>

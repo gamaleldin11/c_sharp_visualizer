@@ -1,0 +1,933 @@
+{
+  "version": 1,
+  "sourceHash": "07eefa9f5dcdd0c85d8faba2ac03d8a98496d5206c3a66d4332c4d975827136e",
+  "source": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        Node head = new Node(1);\n        head.Next = new Node(2);\n        head.Next.Next = new Node(3);\n        int sum = 0;\n        Node cur = head;\n        while (cur != null)\n        {\n            sum \u002B= cur.Value;\n            Console.WriteLine(cur.Value);\n            cur = cur.Next;\n        }\n        Console.WriteLine(sum);\n        Console.WriteLine(head.Next.Next.Next == null);\n    }\n}\n\nclass Node\n{\n    public int Value;\n    public Node Next;\n    public Node(int v) { Value = v; }\n}\n",
+  "status": "ok",
+  "diagnostics": [],
+  "strings": [
+    "1\n",
+    "2\n",
+    "3\n",
+    "6\n",
+    "True\n"
+  ],
+  "types": [
+    {
+      "id": 0,
+      "name": "Node",
+      "kind": "class"
+    }
+  ],
+  "snapshots": [
+    {
+      "frames": [
+        {
+          "id": 1,
+          "methodName": "Main",
+          "declaringType": "Program",
+          "callLine": 0,
+          "slots": [
+            {
+              "slotId": 1,
+              "name": "head",
+              "kind": "local",
+              "declaredLine": 7,
+              "inScope": true,
+              "value": {
+                "k": "unset"
+              }
+            },
+            {
+              "slotId": 2,
+              "name": "sum",
+              "kind": "local",
+              "declaredLine": 10,
+              "inScope": true,
+              "value": {
+                "k": "unset"
+              }
+            },
+            {
+              "slotId": 3,
+              "name": "cur",
+              "kind": "local",
+              "declaredLine": 11,
+              "inScope": true,
+              "value": {
+                "k": "unset"
+              }
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "methodName": ".ctor",
+          "declaringType": "Node",
+          "callLine": 0,
+          "slots": [
+            {
+              "slotId": 1,
+              "name": "v",
+              "kind": "param",
+              "declaredLine": 0,
+              "inScope": true,
+              "value": {
+                "k": "prim",
+                "t": "int",
+                "v": 1
+              }
+            }
+          ]
+        }
+      ],
+      "heap": {
+        "1": {
+          "k": "object",
+          "t": 0,
+          "fields": [
+            {
+              "name": "Value",
+              "value": {
+                "k": "prim",
+                "t": "int",
+                "v": 0
+              }
+            },
+            {
+              "name": "Next",
+              "value": {
+                "k": "null"
+              }
+            }
+          ]
+        }
+      },
+      "stdout": ""
+    }
+  ],
+  "keyframes": [
+    {
+      "stepIndex": 0,
+      "snapshotIndex": 0
+    }
+  ],
+  "steps": [
+    {
+      "i": 0,
+      "line": 7,
+      "col": 9,
+      "endLine": 7,
+      "endCol": 33,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "pushFrame",
+          {
+            "id": 1,
+            "methodName": "Main",
+            "declaringType": "Program",
+            "callLine": 0,
+            "slots": [
+              {
+                "slotId": 1,
+                "name": "head",
+                "kind": "local",
+                "declaredLine": 7,
+                "inScope": false,
+                "value": {
+                  "k": "unset"
+                }
+              },
+              {
+                "slotId": 2,
+                "name": "sum",
+                "kind": "local",
+                "declaredLine": 10,
+                "inScope": false,
+                "value": {
+                  "k": "unset"
+                }
+              },
+              {
+                "slotId": 3,
+                "name": "cur",
+                "kind": "local",
+                "declaredLine": 11,
+                "inScope": false,
+                "value": {
+                  "k": "unset"
+                }
+              }
+            ]
+          }
+        ],
+        [
+          "scope",
+          1,
+          1,
+          true
+        ],
+        [
+          "scope",
+          1,
+          2,
+          true
+        ],
+        [
+          "scope",
+          1,
+          3,
+          true
+        ],
+        [
+          "newObj",
+          1,
+          {
+            "k": "object",
+            "t": 0,
+            "fields": [
+              {
+                "name": "Value",
+                "value": {
+                  "k": "prim",
+                  "t": "int",
+                  "v": 0
+                }
+              },
+              {
+                "name": "Next",
+                "value": {
+                  "k": "null"
+                }
+              }
+            ]
+          }
+        ],
+        [
+          "pushFrame",
+          {
+            "id": 2,
+            "methodName": ".ctor",
+            "declaringType": "Node",
+            "callLine": 0,
+            "slots": [
+              {
+                "slotId": 1,
+                "name": "v",
+                "kind": "param",
+                "declaredLine": 0,
+                "inScope": true,
+                "value": {
+                  "k": "prim",
+                  "t": "int",
+                  "v": 1
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "i": 1,
+      "line": 27,
+      "col": 26,
+      "endLine": 27,
+      "endCol": 36,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "setField",
+          1,
+          "Value",
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 1
+          }
+        ]
+      ]
+    },
+    {
+      "i": 2,
+      "line": 7,
+      "col": 9,
+      "endLine": 7,
+      "endCol": 33,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "popFrame"
+        ],
+        [
+          "setLocal",
+          1,
+          1,
+          {
+            "k": "ref",
+            "id": 1
+          }
+        ]
+      ]
+    },
+    {
+      "i": 3,
+      "line": 8,
+      "col": 9,
+      "endLine": 8,
+      "endCol": 33,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "newObj",
+          2,
+          {
+            "k": "object",
+            "t": 0,
+            "fields": [
+              {
+                "name": "Value",
+                "value": {
+                  "k": "prim",
+                  "t": "int",
+                  "v": 0
+                }
+              },
+              {
+                "name": "Next",
+                "value": {
+                  "k": "null"
+                }
+              }
+            ]
+          }
+        ],
+        [
+          "pushFrame",
+          {
+            "id": 2,
+            "methodName": ".ctor",
+            "declaringType": "Node",
+            "callLine": 0,
+            "slots": [
+              {
+                "slotId": 1,
+                "name": "v",
+                "kind": "param",
+                "declaredLine": 0,
+                "inScope": true,
+                "value": {
+                  "k": "prim",
+                  "t": "int",
+                  "v": 2
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "i": 4,
+      "line": 27,
+      "col": 26,
+      "endLine": 27,
+      "endCol": 36,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "setField",
+          2,
+          "Value",
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 2
+          }
+        ]
+      ]
+    },
+    {
+      "i": 5,
+      "line": 8,
+      "col": 9,
+      "endLine": 8,
+      "endCol": 33,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "popFrame"
+        ],
+        [
+          "setField",
+          1,
+          "Next",
+          {
+            "k": "ref",
+            "id": 2
+          }
+        ]
+      ]
+    },
+    {
+      "i": 6,
+      "line": 9,
+      "col": 9,
+      "endLine": 9,
+      "endCol": 38,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "newObj",
+          3,
+          {
+            "k": "object",
+            "t": 0,
+            "fields": [
+              {
+                "name": "Value",
+                "value": {
+                  "k": "prim",
+                  "t": "int",
+                  "v": 0
+                }
+              },
+              {
+                "name": "Next",
+                "value": {
+                  "k": "null"
+                }
+              }
+            ]
+          }
+        ],
+        [
+          "pushFrame",
+          {
+            "id": 2,
+            "methodName": ".ctor",
+            "declaringType": "Node",
+            "callLine": 0,
+            "slots": [
+              {
+                "slotId": 1,
+                "name": "v",
+                "kind": "param",
+                "declaredLine": 0,
+                "inScope": true,
+                "value": {
+                  "k": "prim",
+                  "t": "int",
+                  "v": 3
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "i": 7,
+      "line": 27,
+      "col": 26,
+      "endLine": 27,
+      "endCol": 36,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "setField",
+          3,
+          "Value",
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 3
+          }
+        ]
+      ]
+    },
+    {
+      "i": 8,
+      "line": 9,
+      "col": 9,
+      "endLine": 9,
+      "endCol": 38,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "popFrame"
+        ],
+        [
+          "setField",
+          2,
+          "Next",
+          {
+            "k": "ref",
+            "id": 3
+          }
+        ]
+      ]
+    },
+    {
+      "i": 9,
+      "line": 10,
+      "col": 9,
+      "endLine": 10,
+      "endCol": 21,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "setLocal",
+          1,
+          2,
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 0
+          }
+        ]
+      ]
+    },
+    {
+      "i": 10,
+      "line": 11,
+      "col": 9,
+      "endLine": 11,
+      "endCol": 25,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "setLocal",
+          1,
+          3,
+          {
+            "k": "ref",
+            "id": 1
+          }
+        ]
+      ]
+    },
+    {
+      "i": 11,
+      "line": 12,
+      "col": 9,
+      "endLine": 17,
+      "endCol": 10,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": []
+    },
+    {
+      "i": 12,
+      "line": 14,
+      "col": 13,
+      "endLine": 14,
+      "endCol": 30,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "setLocal",
+          1,
+          2,
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 1
+          }
+        ]
+      ]
+    },
+    {
+      "i": 13,
+      "line": 15,
+      "col": 13,
+      "endLine": 15,
+      "endCol": 42,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          0
+        ]
+      ]
+    },
+    {
+      "i": 14,
+      "line": 16,
+      "col": 13,
+      "endLine": 16,
+      "endCol": 28,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "setLocal",
+          1,
+          3,
+          {
+            "k": "ref",
+            "id": 2
+          }
+        ]
+      ]
+    },
+    {
+      "i": 15,
+      "line": 14,
+      "col": 13,
+      "endLine": 14,
+      "endCol": 30,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "setLocal",
+          1,
+          2,
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 3
+          }
+        ]
+      ]
+    },
+    {
+      "i": 16,
+      "line": 15,
+      "col": 13,
+      "endLine": 15,
+      "endCol": 42,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          1
+        ]
+      ]
+    },
+    {
+      "i": 17,
+      "line": 16,
+      "col": 13,
+      "endLine": 16,
+      "endCol": 28,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "setLocal",
+          1,
+          3,
+          {
+            "k": "ref",
+            "id": 3
+          }
+        ]
+      ]
+    },
+    {
+      "i": 18,
+      "line": 14,
+      "col": 13,
+      "endLine": 14,
+      "endCol": 30,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "setLocal",
+          1,
+          2,
+          {
+            "k": "prim",
+            "t": "int",
+            "v": 6
+          }
+        ]
+      ]
+    },
+    {
+      "i": 19,
+      "line": 15,
+      "col": 13,
+      "endLine": 15,
+      "endCol": 42,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          2
+        ]
+      ]
+    },
+    {
+      "i": 20,
+      "line": 16,
+      "col": 13,
+      "endLine": 16,
+      "endCol": 28,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "setLocal",
+          1,
+          3,
+          {
+            "k": "null"
+          }
+        ]
+      ]
+    },
+    {
+      "i": 21,
+      "line": 18,
+      "col": 9,
+      "endLine": 18,
+      "endCol": 32,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          3
+        ]
+      ]
+    },
+    {
+      "i": 22,
+      "line": 19,
+      "col": 9,
+      "endLine": 19,
+      "endCol": 56,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          4
+        ]
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "name": "Main",
+      "declaringType": "Program",
+      "startLine": 5,
+      "endLine": 20,
+      "blocks": [
+        {
+          "ordinal": 0,
+          "kind": "entry",
+          "label": "start",
+          "lines": [],
+          "fallThrough": 1,
+          "reachable": true
+        },
+        {
+          "ordinal": 1,
+          "kind": "block",
+          "label": "head = new Node(1)\nhead.Next = new Node(2);\nhead.Next.Next = new Node(3);\nsum = 0\ncur = head",
+          "lines": [
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "fallThrough": 2,
+          "reachable": true
+        },
+        {
+          "ordinal": 2,
+          "kind": "block",
+          "label": "cur != null",
+          "lines": [
+            12
+          ],
+          "condition": "cur != null",
+          "fallThrough": 3,
+          "conditionalTarget": 4,
+          "conditionalLabel": "false",
+          "reachable": true
+        },
+        {
+          "ordinal": 3,
+          "kind": "block",
+          "label": "sum \u002B= cur.Value;\nConsole.WriteLine(cur.Value);\ncur = cur.Next;",
+          "lines": [
+            14,
+            15,
+            16
+          ],
+          "fallThrough": 2,
+          "reachable": true
+        },
+        {
+          "ordinal": 4,
+          "kind": "block",
+          "label": "Console.WriteLine(sum);\nConsole.WriteLine(head.Next.Next.Next == null);",
+          "lines": [
+            18,
+            19
+          ],
+          "fallThrough": 5,
+          "reachable": true
+        },
+        {
+          "ordinal": 5,
+          "kind": "exit",
+          "label": "end",
+          "lines": [],
+          "reachable": true
+        }
+      ],
+      "lineFacts": [
+        {
+          "line": 7,
+          "reads": [],
+          "writes": [
+            "head"
+          ]
+        },
+        {
+          "line": 8,
+          "reads": [
+            "head"
+          ],
+          "writes": []
+        },
+        {
+          "line": 9,
+          "reads": [
+            "head"
+          ],
+          "writes": []
+        },
+        {
+          "line": 10,
+          "reads": [],
+          "writes": [
+            "sum"
+          ]
+        },
+        {
+          "line": 11,
+          "reads": [
+            "head"
+          ],
+          "writes": [
+            "cur"
+          ]
+        },
+        {
+          "line": 12,
+          "reads": [
+            "cur"
+          ],
+          "writes": []
+        },
+        {
+          "line": 14,
+          "reads": [
+            "cur",
+            "sum"
+          ],
+          "writes": [
+            "sum"
+          ]
+        },
+        {
+          "line": 15,
+          "reads": [
+            "cur"
+          ],
+          "writes": []
+        },
+        {
+          "line": 16,
+          "reads": [
+            "cur"
+          ],
+          "writes": [
+            "cur"
+          ]
+        },
+        {
+          "line": 18,
+          "reads": [
+            "sum"
+          ],
+          "writes": []
+        },
+        {
+          "line": 19,
+          "reads": [
+            "head"
+          ],
+          "writes": []
+        }
+      ]
+    },
+    {
+      "name": ".ctor",
+      "declaringType": "Node",
+      "startLine": 27,
+      "endLine": 27,
+      "blocks": [
+        {
+          "ordinal": 0,
+          "kind": "entry",
+          "label": "start",
+          "lines": [],
+          "fallThrough": 1,
+          "reachable": true
+        },
+        {
+          "ordinal": 1,
+          "kind": "block",
+          "label": "public Node(int v) { Value = v; }\nValue = v;",
+          "lines": [
+            27
+          ],
+          "fallThrough": 2,
+          "reachable": true
+        },
+        {
+          "ordinal": 2,
+          "kind": "exit",
+          "label": "end",
+          "lines": [],
+          "reachable": true
+        }
+      ],
+      "lineFacts": [
+        {
+          "line": 27,
+          "reads": [
+            "this",
+            "v"
+          ],
+          "writes": []
+        }
+      ]
+    }
+  ]
+}

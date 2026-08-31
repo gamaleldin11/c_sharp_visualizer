@@ -1,0 +1,33 @@
+# Programs whose full trace is snapshotted.
+#
+# Chosen for trace shape, not for coverage of the language - the differential suite covers
+# semantics. Each one here exercises a different part of the wire format, and each is small
+# enough that a human can read the diff when it changes.
+
+# Value vs reference semantics: the single most important thing the memory view must get right.
+04_struct_aliasing.cs
+25_struct_value_semantics.cs
+
+# Heap graph with pointer edges between objects.
+24_linked_list.cs
+
+# Frame push/pop and virtual dispatch.
+05_virtual_dispatch.cs
+23_inheritance_dispatch.cs
+
+# Exception unwinding: catch and finally deltas.
+07_try_catch_unwind.cs
+
+# Collection heap shapes (list, dict, stack, queue) and their mutation deltas.
+06_foreach_dictionary.cs
+17_list_operations.cs
+18_stack_queue.cs
+
+# Arrays: element defaults, setElem deltas, in-place swaps.
+22_array_defaults.cs
+
+# Statics rendered as a per-type heap object.
+19_static_fields.cs
+
+# Scope entry/exit for repeated and shadowed blocks.
+31_scope_shadowing.cs

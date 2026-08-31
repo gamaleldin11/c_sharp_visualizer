@@ -1,0 +1,296 @@
+{
+  "version": 1,
+  "sourceHash": "014ac130bdc0206b68ba5a3987a07aa81e64abfc8d504cf6d4747715277cc802",
+  "source": "using System;\n\nclass Base { public virtual void Speak() { Console.WriteLine(\u0022Base\u0022); } }\nclass Derived : Base { public override void Speak() { Console.WriteLine(\u0022Derived\u0022); } }\n\nclass Program\n{\n    static void Main()\n    {\n        Base b = new Derived();\n        b.Speak();\n    }\n}\n",
+  "status": "ok",
+  "diagnostics": [],
+  "strings": [
+    "Derived\n"
+  ],
+  "types": [
+    {
+      "id": 0,
+      "name": "Derived",
+      "kind": "class"
+    }
+  ],
+  "snapshots": [
+    {
+      "frames": [
+        {
+          "id": 1,
+          "methodName": "Main",
+          "declaringType": "Program",
+          "callLine": 0,
+          "slots": [
+            {
+              "slotId": 1,
+              "name": "b",
+              "kind": "local",
+              "declaredLine": 10,
+              "inScope": true,
+              "value": {
+                "k": "ref",
+                "id": 1
+              }
+            }
+          ]
+        }
+      ],
+      "heap": {
+        "1": {
+          "k": "object",
+          "t": 0,
+          "fields": []
+        }
+      },
+      "stdout": ""
+    }
+  ],
+  "keyframes": [
+    {
+      "stepIndex": 0,
+      "snapshotIndex": 0
+    }
+  ],
+  "steps": [
+    {
+      "i": 0,
+      "line": 10,
+      "col": 9,
+      "endLine": 10,
+      "endCol": 32,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "pushFrame",
+          {
+            "id": 1,
+            "methodName": "Main",
+            "declaringType": "Program",
+            "callLine": 0,
+            "slots": [
+              {
+                "slotId": 1,
+                "name": "b",
+                "kind": "local",
+                "declaredLine": 10,
+                "inScope": false,
+                "value": {
+                  "k": "unset"
+                }
+              }
+            ]
+          }
+        ],
+        [
+          "scope",
+          1,
+          1,
+          true
+        ],
+        [
+          "newObj",
+          1,
+          {
+            "k": "object",
+            "t": 0,
+            "fields": []
+          }
+        ],
+        [
+          "setLocal",
+          1,
+          1,
+          {
+            "k": "ref",
+            "id": 1
+          }
+        ]
+      ]
+    },
+    {
+      "i": 1,
+      "line": 11,
+      "col": 9,
+      "endLine": 11,
+      "endCol": 19,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "pushFrame",
+          {
+            "id": 2,
+            "methodName": "Speak",
+            "declaringType": "Derived",
+            "callLine": 0,
+            "slots": []
+          }
+        ]
+      ]
+    },
+    {
+      "i": 2,
+      "line": 4,
+      "col": 55,
+      "endLine": 4,
+      "endCol": 84,
+      "kind": "stmt",
+      "frameDepth": 2,
+      "delta": [
+        [
+          "stdout",
+          0
+        ]
+      ]
+    },
+    {
+      "i": 3,
+      "line": 11,
+      "col": 9,
+      "endLine": 11,
+      "endCol": 19,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "popFrame"
+        ]
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "name": "Speak",
+      "declaringType": "Base",
+      "startLine": 3,
+      "endLine": 3,
+      "blocks": [
+        {
+          "ordinal": 0,
+          "kind": "entry",
+          "label": "start",
+          "lines": [],
+          "fallThrough": 1,
+          "reachable": true
+        },
+        {
+          "ordinal": 1,
+          "kind": "block",
+          "label": "Console.WriteLine(\u0022Base\u0022);",
+          "lines": [
+            3
+          ],
+          "fallThrough": 2,
+          "reachable": true
+        },
+        {
+          "ordinal": 2,
+          "kind": "exit",
+          "label": "end",
+          "lines": [],
+          "reachable": true
+        }
+      ],
+      "lineFacts": [
+        {
+          "line": 3,
+          "reads": [],
+          "writes": []
+        }
+      ]
+    },
+    {
+      "name": "Speak",
+      "declaringType": "Derived",
+      "startLine": 4,
+      "endLine": 4,
+      "blocks": [
+        {
+          "ordinal": 0,
+          "kind": "entry",
+          "label": "start",
+          "lines": [],
+          "fallThrough": 1,
+          "reachable": true
+        },
+        {
+          "ordinal": 1,
+          "kind": "block",
+          "label": "Console.WriteLine(\u0022Derived\u0022);",
+          "lines": [
+            4
+          ],
+          "fallThrough": 2,
+          "reachable": true
+        },
+        {
+          "ordinal": 2,
+          "kind": "exit",
+          "label": "end",
+          "lines": [],
+          "reachable": true
+        }
+      ],
+      "lineFacts": [
+        {
+          "line": 4,
+          "reads": [],
+          "writes": []
+        }
+      ]
+    },
+    {
+      "name": "Main",
+      "declaringType": "Program",
+      "startLine": 8,
+      "endLine": 12,
+      "blocks": [
+        {
+          "ordinal": 0,
+          "kind": "entry",
+          "label": "start",
+          "lines": [],
+          "fallThrough": 1,
+          "reachable": true
+        },
+        {
+          "ordinal": 1,
+          "kind": "block",
+          "label": "b = new Derived()\nb.Speak();",
+          "lines": [
+            10,
+            11
+          ],
+          "fallThrough": 2,
+          "reachable": true
+        },
+        {
+          "ordinal": 2,
+          "kind": "exit",
+          "label": "end",
+          "lines": [],
+          "reachable": true
+        }
+      ],
+      "lineFacts": [
+        {
+          "line": 10,
+          "reads": [],
+          "writes": [
+            "b"
+          ]
+        },
+        {
+          "line": 11,
+          "reads": [
+            "b"
+          ],
+          "writes": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" />
+    <PackageReference Include="Basic.Reference.Assemblies.Net80" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\CsViz.Analysis\CsViz.Analysis.csproj" />
+    <ProjectReference Include="..\..\src\CsViz.Core\CsViz.Core.csproj" />
+    <ProjectReference Include="..\..\src\CsViz.Trace\CsViz.Trace.csproj" />
+  </ItemGroup>
+
+  <!-- The corpus is shared with CsViz.Golden: one set of programs, two different oracles. -->
+  <ItemGroup>
+    <None Include="..\CsViz.Golden\corpus\**\*.*" LinkBase="corpus">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

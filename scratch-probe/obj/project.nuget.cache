@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "PRYq+tQjKGo=",
+  "success": true,
+  "projectFilePath": "E:\\beeviro\\CS visualizer C#\\cs-visualizer\\scratch-probe\\ProbeApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gehaz\\.nuget\\packages\\basic.reference.assemblies.net80\\1.8.11\\basic.reference.assemblies.net80.1.8.11.nupkg.sha512",
+    "C:\\Users\\gehaz\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.4\\microsoft.codeanalysis.analyzers.3.3.4.nupkg.sha512",
+    "C:\\Users\\gehaz\\.nuget\\packages\\microsoft.codeanalysis.common\\4.11.0\\microsoft.codeanalysis.common.4.11.0.nupkg.sha512",
+    "C:\\Users\\gehaz\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.11.0\\microsoft.codeanalysis.csharp.4.11.0.nupkg.sha512"
+  ],
+  "logs": []
+}

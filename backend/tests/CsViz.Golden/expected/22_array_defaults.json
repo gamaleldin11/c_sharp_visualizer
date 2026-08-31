@@ -1,0 +1,685 @@
+{
+  "version": 1,
+  "sourceHash": "d829a7d3e409ba7cb0e2e59470abba7eb413f309aa8a36d773af631a70069e1d",
+  "source": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int[] ints = new int[3];\n        bool[] bools = new bool[2];\n        double[] doubles = new double[2];\n        string[] strings = new string[2];\n        Console.WriteLine(ints[0]);\n        Console.WriteLine(bools[0]);\n        Console.WriteLine(doubles[0]);\n        Console.WriteLine(strings[0] == null);\n        Console.WriteLine(ints.Length);\n        int[] init = { 1, 2, 3 };\n        Console.WriteLine(init[0]);\n        Console.WriteLine(init[2]);\n    }\n}\n",
+  "status": "ok",
+  "diagnostics": [],
+  "strings": [
+    "0\n",
+    "False\n",
+    "True\n",
+    "3\n",
+    "1\n"
+  ],
+  "types": [
+    {
+      "id": 0,
+      "name": "int[]",
+      "kind": "array"
+    },
+    {
+      "id": 1,
+      "name": "bool[]",
+      "kind": "array"
+    },
+    {
+      "id": 2,
+      "name": "double[]",
+      "kind": "array"
+    },
+    {
+      "id": 3,
+      "name": "string[]",
+      "kind": "array"
+    }
+  ],
+  "snapshots": [
+    {
+      "frames": [
+        {
+          "id": 1,
+          "methodName": "Main",
+          "declaringType": "Program",
+          "callLine": 0,
+          "slots": [
+            {
+              "slotId": 1,
+              "name": "ints",
+              "kind": "local",
+              "declaredLine": 7,
+              "inScope": true,
+              "value": {
+                "k": "ref",
+                "id": 1
+              }
+            },
+            {
+              "slotId": 2,
+              "name": "bools",
+              "kind": "local",
+              "declaredLine": 8,
+              "inScope": true,
+              "value": {
+                "k": "unset"
+              }
+            },
+            {
+              "slotId": 3,
+              "name": "doubles",
+              "kind": "local",
+              "declaredLine": 9,
+              "inScope": true,
+              "value": {
+                "k": "unset"
+              }
+            },
+            {
+              "slotId": 4,
+              "name": "strings",
+              "kind": "local",
+              "declaredLine": 10,
+              "inScope": true,
+              "value": {
+                "k": "unset"
+              }
+            },
+            {
+              "slotId": 5,
+              "name": "init",
+              "kind": "local",
+              "declaredLine": 16,
+              "inScope": true,
+              "value": {
+                "k": "unset"
+              }
+            }
+          ]
+        }
+      ],
+      "heap": {
+        "1": {
+          "k": "array",
+          "t": 0,
+          "dims": [
+            3
+          ],
+          "elems": [
+            {
+              "k": "prim",
+              "t": "int",
+              "v": 0
+            },
+            {
+              "k": "prim",
+              "t": "int",
+              "v": 0
+            },
+            {
+              "k": "prim",
+              "t": "int",
+              "v": 0
+            }
+          ]
+        }
+      },
+      "stdout": ""
+    }
+  ],
+  "keyframes": [
+    {
+      "stepIndex": 0,
+      "snapshotIndex": 0
+    }
+  ],
+  "steps": [
+    {
+      "i": 0,
+      "line": 7,
+      "col": 9,
+      "endLine": 7,
+      "endCol": 33,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "pushFrame",
+          {
+            "id": 1,
+            "methodName": "Main",
+            "declaringType": "Program",
+            "callLine": 0,
+            "slots": [
+              {
+                "slotId": 1,
+                "name": "ints",
+                "kind": "local",
+                "declaredLine": 7,
+                "inScope": false,
+                "value": {
+                  "k": "unset"
+                }
+              },
+              {
+                "slotId": 2,
+                "name": "bools",
+                "kind": "local",
+                "declaredLine": 8,
+                "inScope": false,
+                "value": {
+                  "k": "unset"
+                }
+              },
+              {
+                "slotId": 3,
+                "name": "doubles",
+                "kind": "local",
+                "declaredLine": 9,
+                "inScope": false,
+                "value": {
+                  "k": "unset"
+                }
+              },
+              {
+                "slotId": 4,
+                "name": "strings",
+                "kind": "local",
+                "declaredLine": 10,
+                "inScope": false,
+                "value": {
+                  "k": "unset"
+                }
+              },
+              {
+                "slotId": 5,
+                "name": "init",
+                "kind": "local",
+                "declaredLine": 16,
+                "inScope": false,
+                "value": {
+                  "k": "unset"
+                }
+              }
+            ]
+          }
+        ],
+        [
+          "scope",
+          1,
+          1,
+          true
+        ],
+        [
+          "scope",
+          1,
+          2,
+          true
+        ],
+        [
+          "scope",
+          1,
+          3,
+          true
+        ],
+        [
+          "scope",
+          1,
+          4,
+          true
+        ],
+        [
+          "scope",
+          1,
+          5,
+          true
+        ],
+        [
+          "newObj",
+          1,
+          {
+            "k": "array",
+            "t": 0,
+            "dims": [
+              3
+            ],
+            "elems": [
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 0
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 0
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 0
+              }
+            ]
+          }
+        ],
+        [
+          "setLocal",
+          1,
+          1,
+          {
+            "k": "ref",
+            "id": 1
+          }
+        ]
+      ]
+    },
+    {
+      "i": 1,
+      "line": 8,
+      "col": 9,
+      "endLine": 8,
+      "endCol": 36,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "newObj",
+          2,
+          {
+            "k": "array",
+            "t": 1,
+            "dims": [
+              2
+            ],
+            "elems": [
+              {
+                "k": "prim",
+                "t": "bool",
+                "v": false
+              },
+              {
+                "k": "prim",
+                "t": "bool",
+                "v": false
+              }
+            ]
+          }
+        ],
+        [
+          "setLocal",
+          1,
+          2,
+          {
+            "k": "ref",
+            "id": 2
+          }
+        ]
+      ]
+    },
+    {
+      "i": 2,
+      "line": 9,
+      "col": 9,
+      "endLine": 9,
+      "endCol": 42,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "newObj",
+          3,
+          {
+            "k": "array",
+            "t": 2,
+            "dims": [
+              2
+            ],
+            "elems": [
+              {
+                "k": "prim",
+                "t": "double",
+                "v": 0
+              },
+              {
+                "k": "prim",
+                "t": "double",
+                "v": 0
+              }
+            ]
+          }
+        ],
+        [
+          "setLocal",
+          1,
+          3,
+          {
+            "k": "ref",
+            "id": 3
+          }
+        ]
+      ]
+    },
+    {
+      "i": 3,
+      "line": 10,
+      "col": 9,
+      "endLine": 10,
+      "endCol": 42,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "newObj",
+          4,
+          {
+            "k": "array",
+            "t": 3,
+            "dims": [
+              2
+            ],
+            "elems": [
+              {
+                "k": "null"
+              },
+              {
+                "k": "null"
+              }
+            ]
+          }
+        ],
+        [
+          "setLocal",
+          1,
+          4,
+          {
+            "k": "ref",
+            "id": 4
+          }
+        ]
+      ]
+    },
+    {
+      "i": 4,
+      "line": 11,
+      "col": 9,
+      "endLine": 11,
+      "endCol": 36,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          0
+        ]
+      ]
+    },
+    {
+      "i": 5,
+      "line": 12,
+      "col": 9,
+      "endLine": 12,
+      "endCol": 37,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          1
+        ]
+      ]
+    },
+    {
+      "i": 6,
+      "line": 13,
+      "col": 9,
+      "endLine": 13,
+      "endCol": 39,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          0
+        ]
+      ]
+    },
+    {
+      "i": 7,
+      "line": 14,
+      "col": 9,
+      "endLine": 14,
+      "endCol": 47,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          2
+        ]
+      ]
+    },
+    {
+      "i": 8,
+      "line": 15,
+      "col": 9,
+      "endLine": 15,
+      "endCol": 40,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          3
+        ]
+      ]
+    },
+    {
+      "i": 9,
+      "line": 16,
+      "col": 9,
+      "endLine": 16,
+      "endCol": 34,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "newObj",
+          5,
+          {
+            "k": "array",
+            "t": 0,
+            "dims": [
+              3
+            ],
+            "elems": [
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 1
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 2
+              },
+              {
+                "k": "prim",
+                "t": "int",
+                "v": 3
+              }
+            ]
+          }
+        ],
+        [
+          "setLocal",
+          1,
+          5,
+          {
+            "k": "ref",
+            "id": 5
+          }
+        ]
+      ]
+    },
+    {
+      "i": 10,
+      "line": 17,
+      "col": 9,
+      "endLine": 17,
+      "endCol": 36,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          4
+        ]
+      ]
+    },
+    {
+      "i": 11,
+      "line": 18,
+      "col": 9,
+      "endLine": 18,
+      "endCol": 36,
+      "kind": "stmt",
+      "frameDepth": 1,
+      "delta": [
+        [
+          "stdout",
+          3
+        ]
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "name": "Main",
+      "declaringType": "Program",
+      "startLine": 5,
+      "endLine": 19,
+      "blocks": [
+        {
+          "ordinal": 0,
+          "kind": "entry",
+          "label": "start",
+          "lines": [],
+          "fallThrough": 1,
+          "reachable": true
+        },
+        {
+          "ordinal": 1,
+          "kind": "block",
+          "label": "ints = new int[3]\nbools = new bool[2]\ndoubles = new double[2]\nstrings = new string[2]\nConsole.WriteLine(ints[0]);\nConsole.WriteLine(bools[0]);\nConsole.WriteLine(doubles[0]);\nConsole.WriteLine(strings[0] == null);\nConsole.WriteLine(ints.Length);\ninit = { 1, 2, 3 }\nConsole.WriteLine(init[0]);\nConsole.WriteLine(init[2]);",
+          "lines": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "fallThrough": 2,
+          "reachable": true
+        },
+        {
+          "ordinal": 2,
+          "kind": "exit",
+          "label": "end",
+          "lines": [],
+          "reachable": true
+        }
+      ],
+      "lineFacts": [
+        {
+          "line": 7,
+          "reads": [],
+          "writes": [
+            "ints"
+          ]
+        },
+        {
+          "line": 8,
+          "reads": [],
+          "writes": [
+            "bools"
+          ]
+        },
+        {
+          "line": 9,
+          "reads": [],
+          "writes": [
+            "doubles"
+          ]
+        },
+        {
+          "line": 10,
+          "reads": [],
+          "writes": [
+            "strings"
+          ]
+        },
+        {
+          "line": 11,
+          "reads": [
+            "ints"
+          ],
+          "writes": []
+        },
+        {
+          "line": 12,
+          "reads": [
+            "bools"
+          ],
+          "writes": []
+        },
+        {
+          "line": 13,
+          "reads": [
+            "doubles"
+          ],
+          "writes": []
+        },
+        {
+          "line": 14,
+          "reads": [
+            "strings"
+          ],
+          "writes": []
+        },
+        {
+          "line": 15,
+          "reads": [
+            "ints"
+          ],
+          "writes": []
+        },
+        {
+          "line": 16,
+          "reads": [],
+          "writes": [
+            "init"
+          ]
+        },
+        {
+          "line": 17,
+          "reads": [
+            "init"
+          ],
+          "writes": []
+        },
+        {
+          "line": 18,
+          "reads": [
+            "init"
+          ],
+          "writes": []
+        }
+      ]
+    }
+  ]
+}

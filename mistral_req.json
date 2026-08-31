@@ -1,0 +1,4 @@
+{
+  "model": "mistral-small-latest",
+  "messages": [{"role": "user", "content": "Hello"}]
+}

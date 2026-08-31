@@ -1,0 +1,356 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Trace",
+  "type": "object",
+  "properties": {
+    "version": { "type": "integer", "const": 1 },
+    "sourceHash": { "type": "string" },
+    "source": { "type": "string" },
+    "stdin": { "type": ["string", "null"] },
+    "status": {
+      "type": "string",
+      "enum": ["ok", "compile_error", "runtime_error", "limit_exceeded"]
+    },
+    "limitHit": {
+      "type": "string",
+      "enum": ["steps", "heap", "stackDepth", "output", "time"]
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/Diagnostic" }
+    },
+    "strings": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "types": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/TypeInfo" }
+    },
+    "snapshots": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/Snapshot" }
+    },
+    "keyframes": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/Keyframe" }
+    },
+    "steps": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/Step" }
+    }
+  },
+  "required": ["version", "sourceHash", "source", "status", "diagnostics", "strings", "types", "snapshots", "keyframes", "steps"],
+  "definitions": {
+    "Diagnostic": {
+      "type": "object",
+      "properties": {
+        "severity": { "type": "integer" },
+        "line": { "type": "integer" },
+        "col": { "type": "integer" },
+        "endLine": { "type": "integer" },
+        "endCol": { "type": "integer" },
+        "message": { "type": "string" },
+        "id": { "type": "string" }
+      },
+      "required": ["severity", "line", "col", "endLine", "endCol", "message", "id"]
+    },
+    "TypeInfo": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer" },
+        "name": { "type": "string" },
+        "kind": { "type": "string", "enum": ["class", "struct", "array", "enum", "interface", "primitive"] }
+      },
+      "required": ["id", "name", "kind"]
+    },
+    "Keyframe": {
+      "type": "object",
+      "properties": {
+        "stepIndex": { "type": "integer" },
+        "snapshotIndex": { "type": "integer" }
+      },
+      "required": ["stepIndex", "snapshotIndex"]
+    },
+    "Snapshot": {
+      "type": "object",
+      "properties": {
+        "frames": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Frame" }
+        },
+        "heap": {
+          "type": "object",
+          "patternProperties": {
+            "^[0-9]+$": { "$ref": "#/definitions/HeapObject" }
+          },
+          "additionalProperties": false
+        },
+        "stdout": { "type": "string" }
+      },
+      "required": ["frames", "heap", "stdout"]
+    },
+    "Frame": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer" },
+        "methodName": { "type": "string" },
+        "declaringType": { "type": "string" },
+        "callLine": { "type": "integer" },
+        "slots": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Slot" }
+        }
+      },
+      "required": ["id", "methodName", "declaringType", "callLine", "slots"]
+    },
+    "Slot": {
+      "type": "object",
+      "properties": {
+        "slotId": { "type": "integer" },
+        "name": { "type": "string" },
+        "kind": { "type": "string", "enum": ["local", "param"] },
+        "declaredLine": { "type": "integer" },
+        "inScope": { "type": "boolean" },
+        "value": { "$ref": "#/definitions/Value" }
+      },
+      "required": ["slotId", "name", "kind", "declaredLine", "inScope", "value"]
+    },
+    "Value": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "k": { "type": "string", "const": "prim" },
+            "t": { "type": "string" },
+            "v": {}
+          },
+          "required": ["k", "t", "v"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "k": { "type": "string", "const": "null" }
+          },
+          "required": ["k"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "k": { "type": "string", "const": "ref" },
+            "id": { "type": "integer" }
+          },
+          "required": ["k", "id"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "k": { "type": "string", "const": "struct" },
+            "t": { "type": "integer" },
+            "fields": {
+              "type": "object",
+              "additionalProperties": { "$ref": "#/definitions/Value" }
+            }
+          },
+          "required": ["k", "t", "fields"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "k": { "type": "string", "const": "unset" }
+          },
+          "required": ["k"]
+        }
+      ]
+    },
+    "HeapObject": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "k": { "type": "string", "const": "object" },
+            "t": { "type": "integer" },
+            "fields": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": { "type": "string" },
+                  "value": { "$ref": "#/definitions/Value" }
+                },
+                "required": ["name", "value"]
+              }
+            }
+          },
+          "required": ["k", "t", "fields"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "k": { "type": "string", "const": "array" },
+            "t": { "type": "integer" },
+            "dims": {
+              "type": "array",
+              "items": { "type": "integer" }
+            },
+            "elems": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/Value" }
+            }
+          },
+          "required": ["k", "t", "dims", "elems"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "k": { "type": "string", "const": "list" },
+            "t": { "type": "integer" },
+            "count": { "type": "integer" },
+            "capacity": { "type": "integer" },
+            "backing": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/Value" }
+            }
+          },
+          "required": ["k", "t", "count", "capacity", "backing"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "k": { "type": "string", "const": "dict" },
+            "t": { "type": "integer" },
+            "entries": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": { "$ref": "#/definitions/Value" },
+                  "value": { "$ref": "#/definitions/Value" }
+                },
+                "required": ["key", "value"]
+              }
+            }
+          },
+          "required": ["k", "t", "entries"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "k": { "type": "string", "const": "boxed" },
+            "t": { "type": "integer" },
+            "value": { "$ref": "#/definitions/Value" }
+          },
+          "required": ["k", "t", "value"]
+        }
+      ]
+    },
+    "Step": {
+      "type": "object",
+      "properties": {
+        "i": { "type": "integer" },
+        "line": { "type": "integer" },
+        "col": { "type": "integer" },
+        "endLine": { "type": "integer" },
+        "endCol": { "type": "integer" },
+        "kind": { "type": "string", "enum": ["stmt", "expr", "call", "return", "throw", "catch"] },
+        "frameDepth": { "type": "integer" },
+        "delta": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Op" }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "callee": { "type": "string" },
+            "returnValue": { "$ref": "#/definitions/Value" },
+            "exception": {
+              "type": "object",
+              "properties": {
+                "type": { "type": "string" },
+                "message": { "type": "string" }
+              },
+              "required": ["type", "message"]
+            }
+          }
+        }
+      },
+      "required": ["i", "line", "col", "endLine", "endCol", "kind", "frameDepth", "delta"]
+    },
+    "Op": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": [
+            { "type": "string", "const": "setLocal" },
+            { "type": "integer" },
+            { "type": "integer" },
+            { "$ref": "#/definitions/Value" }
+          ],
+          "additionalItems": false
+        },
+        {
+          "type": "array",
+          "items": [
+            { "type": "string", "const": "pushFrame" },
+            { "$ref": "#/definitions/Frame" }
+          ],
+          "additionalItems": false
+        },
+        {
+          "type": "array",
+          "items": [
+            { "type": "string", "const": "popFrame" }
+          ],
+          "additionalItems": false
+        },
+        {
+          "type": "array",
+          "items": [
+            { "type": "string", "const": "setField" },
+            { "type": "integer" },
+            { "type": "string" },
+            { "$ref": "#/definitions/Value" }
+          ],
+          "additionalItems": false
+        },
+        {
+          "type": "array",
+          "items": [
+            { "type": "string", "const": "setElem" },
+            { "type": "integer" },
+            { "type": "integer" },
+            { "$ref": "#/definitions/Value" }
+          ],
+          "additionalItems": false
+        },
+        {
+          "type": "array",
+          "items": [
+            { "type": "string", "const": "newObj" },
+            { "type": "integer" },
+            { "$ref": "#/definitions/HeapObject" }
+          ],
+          "additionalItems": false
+        },
+        {
+          "type": "array",
+          "items": [
+            { "type": "string", "const": "stdout" },
+            { "type": "integer" }
+          ],
+          "additionalItems": false
+        },
+        {
+          "type": "array",
+          "items": [
+            { "type": "string", "const": "scope" },
+            { "type": "integer" },
+            { "type": "integer" },
+            { "type": "boolean" }
+          ],
+          "additionalItems": false
+        }
+      ]
+    }
+  }
+}
