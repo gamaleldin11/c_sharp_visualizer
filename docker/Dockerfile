@@ -29,6 +29,10 @@ WORKDIR /app
 # Unprivileged by default. Nothing here needs root, and a container that does not need it
 # should not have it.
 RUN useradd --uid 10001 --create-home --shell /usr/sbin/nologin csviz
+
+# Create the data directory and give the unprivileged user ownership before mounting the volume.
+RUN mkdir -p /app/data && chown 10001:10001 /app/data
+
 USER 10001
 
 COPY --from=build --chown=10001:10001 /app .
