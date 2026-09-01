@@ -1,2 +1,2 @@
-/api/*  https://cs-visualizer.fly.dev/api/:splat  200
-/healthz https://cs-visualizer.fly.dev/healthz    200
+/api/*  https://c-sharp-visualizer.onrender.com/api/:splat  200
+/healthz https://c-sharp-visualizer.onrender.com/healthz    200
